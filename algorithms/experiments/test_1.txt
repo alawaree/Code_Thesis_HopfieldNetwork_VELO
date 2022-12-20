@@ -1,0 +1,11 @@
+Experiment 1
+
+Initial Test
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 0.2, 'B_decay': <function <lambda> at 0x000002993C20DF70>, 'T_decay': <function <lambda> at 0x000002993C20E040>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 1, 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.5}
+Average number of iterations per convergence: 33.0
+131 tracks including       11 ghosts (  8.4%). Event average   8.4%
+              velo :      103 from      134 ( 76.9%,  76.9%)        9 clones (  8.74%), purity: ( 98.28%,  98.28%),  hitEff: ( 80.85%,  80.85%)
+              long :       22 from       22 (100.0%, 100.0%)        1 clones (  4.55%), purity: ( 98.73%,  98.73%),  hitEff: ( 88.43%,  88.43%)
+         long>5GeV :        8 from        8 (100.0%, 100.0%)        0 clones (  0.00%), purity: ( 97.73%,  97.73%),  hitEff: ( 90.89%,  90.89%)
+____________________
