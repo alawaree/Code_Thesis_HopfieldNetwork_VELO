@@ -1,0 +1,162 @@
+Experiment 1
+
+Pruning Threshold 0.3 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x00000290055C00D0>, 'T_decay': <function <lambda> at 0x00000290055C0160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.3}
+Average number of iterations per convergence: 35.5
+641 tracks including       54 ghosts (  8.4%). Event average   8.2%
+              velo :      501 from      684 ( 73.2%,  77.7%)       28 clones (  5.59%), purity: ( 97.30%,  97.33%),  hitEff: ( 87.59%,  86.86%)
+              long :      159 from      172 ( 92.4%,  89.1%)       18 clones ( 11.32%), purity: ( 97.26%,  96.98%),  hitEff: ( 84.27%,  82.34%)
+         long>5GeV :      103 from      111 ( 92.8%,  86.3%)       14 clones ( 13.59%), purity: ( 97.46%,  97.03%),  hitEff: ( 83.07%,  80.26%)
+      long_strange :        6 from        7 ( 85.7%,  95.2%)        0 clones (  0.00%), purity: ( 98.72%,  97.44%),  hitEff: ( 98.15%,  97.22%)
+ long_strange>5GeV :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 97.22%,  95.83%)
+____________________
+Experiment 2
+
+Pruning Threshold 0.7 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x000001C27C8000D0>, 'T_decay': <function <lambda> at 0x000001C27C800160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.7}
+Average number of iterations per convergence: 32.15
+628 tracks including       68 ghosts ( 10.8%). Event average  11.2%
+              velo :      480 from      684 ( 70.2%,  73.0%)       22 clones (  4.58%), purity: ( 97.09%,  97.08%),  hitEff: ( 89.01%,  88.19%)
+              long :      152 from      172 ( 88.4%,  88.9%)       15 clones (  9.87%), purity: ( 97.60%,  97.41%),  hitEff: ( 85.06%,  83.11%)
+         long>5GeV :      101 from      111 ( 91.0%,  88.9%)       13 clones ( 12.87%), purity: ( 98.05%,  97.79%),  hitEff: ( 83.64%,  80.98%)
+      long_strange :        5 from        7 ( 71.4%,  90.5%)        0 clones (  0.00%), purity: ( 98.46%,  97.44%),  hitEff: ( 97.04%,  94.67%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 91.11%,  91.11%)
+____________________
+Experiment 3
+
+Pruning Threshold 0.9 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x000002696F2F20D0>, 'T_decay': <function <lambda> at 0x000002696F2F2160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.9}
+Average number of iterations per convergence: 33.85
+632 tracks including       67 ghosts ( 10.6%). Event average  10.8%
+              velo :      486 from      684 ( 71.1%,  77.7%)       24 clones (  4.94%), purity: ( 97.00%,  96.83%),  hitEff: ( 88.67%,  88.19%)
+              long :      160 from      172 ( 93.0%,  93.8%)       13 clones (  8.12%), purity: ( 96.47%,  96.25%),  hitEff: ( 85.59%,  84.64%)
+         long>5GeV :      102 from      111 ( 91.9%,  91.8%)       10 clones (  9.80%), purity: ( 97.15%,  96.86%),  hitEff: ( 85.98%,  83.67%)
+      long_strange :        6 from        7 ( 85.7%,  95.2%)        0 clones (  0.00%), purity: ( 98.72%,  97.44%),  hitEff: ( 97.04%,  95.56%)
+ long_strange>5GeV :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 95.56%,  93.33%)
+____________________
+Experiment 4
+
+Pruning Threshold 1.2 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x0000016E056D00D0>, 'T_decay': <function <lambda> at 0x0000016E056D0160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 1.2}
+Average number of iterations per convergence: 32.349999999999994
+628 tracks including       66 ghosts ( 10.5%). Event average  10.6%
+              velo :      484 from      684 ( 70.8%,  76.2%)       26 clones (  5.37%), purity: ( 97.24%,  97.06%),  hitEff: ( 87.53%,  87.23%)
+              long :      153 from      172 ( 89.0%,  89.1%)       14 clones (  9.15%), purity: ( 97.03%,  96.51%),  hitEff: ( 83.42%,  82.34%)
+         long>5GeV :      100 from      111 ( 90.1%,  86.8%)       12 clones ( 12.00%), purity: ( 97.28%,  96.75%),  hitEff: ( 81.79%,  79.26%)
+      long_strange :        5 from        7 ( 71.4%,  90.5%)        0 clones (  0.00%), purity: ( 98.46%,  97.44%),  hitEff: ( 97.04%,  94.67%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 91.11%,  91.11%)
+____________________
+Experiment 5
+
+Pruning Threshold 0.1 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x0000022B094FF0D0>, 'T_decay': <function <lambda> at 0x0000022B094FF160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.1}
+Average number of iterations per convergence: 33.6
+630 tracks including       42 ghosts (  6.7%). Event average   6.5%
+              velo :      501 from      684 ( 73.2%,  79.4%)       29 clones (  5.79%), purity: ( 98.00%,  98.04%),  hitEff: ( 87.05%,  86.56%)
+              long :      158 from      172 ( 91.9%,  92.8%)       19 clones ( 12.03%), purity: ( 97.90%,  97.84%),  hitEff: ( 83.51%,  81.94%)
+         long>5GeV :      103 from      111 ( 92.8%,  92.6%)       14 clones ( 13.59%), purity: ( 98.01%,  98.04%),  hitEff: ( 83.17%,  80.50%)
+      long_strange :        5 from        7 ( 71.4%,  90.5%)        0 clones (  0.00%), purity: ( 98.46%,  97.44%),  hitEff: ( 98.89%,  98.00%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 96.67%,  96.67%)
+____________________
+
+Experiment 6
+
+Pruning Threshold 0.05 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x0000013771C210D0>, 'T_decay': <function <lambda> at 0x0000013771C21160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Average number of iterations per convergence: 33.85
+626 tracks including       28 ghosts (  4.5%). Event average   4.4%
+              velo :      511 from      684 ( 74.7%,  83.3%)       27 clones (  5.28%), purity: ( 98.18%,  98.26%),  hitEff: ( 88.18%,  87.58%)
+              long :      163 from      172 ( 94.8%,  97.4%)       16 clones (  9.82%), purity: ( 98.19%,  98.10%),  hitEff: ( 85.80%,  83.74%)
+         long>5GeV :      106 from      111 ( 95.5%,  98.0%)       14 clones ( 13.21%), purity: ( 98.16%,  98.05%),  hitEff: ( 84.29%,  80.77%)
+      long_strange :        4 from        7 ( 57.1%,  77.4%)        0 clones (  0.00%), purity: ( 98.08%,  97.44%),  hitEff: (100.00%, 100.00%)
+ long_strange>5GeV :        2 from        4 ( 50.0%,  58.3%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
+____________________
+Experiment 7
+
+Pruning Threshold 0.01 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x000002007B9A00D0>, 'T_decay': <function <lambda> at 0x000002007B9A0160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.01}
+Average number of iterations per convergence: 33.25
+612 tracks including       11 ghosts (  1.8%). Event average   2.0%
+              velo :      500 from      684 ( 73.1%,  79.3%)       47 clones (  9.40%), purity: ( 99.32%,  99.35%),  hitEff: ( 83.93%,  83.82%)
+              long :      167 from      172 ( 97.1%,  97.4%)       19 clones ( 11.38%), purity: ( 99.39%,  99.47%),  hitEff: ( 83.68%,  81.98%)
+         long>5GeV :      108 from      111 ( 97.3%,  96.7%)       15 clones ( 13.89%), purity: ( 99.42%,  99.42%),  hitEff: ( 84.15%,  80.65%)
+      long_strange :        7 from        7 (100.0%, 100.0%)        1 clones ( 14.29%), purity: (100.00%, 100.00%),  hitEff: ( 76.67%,  80.00%)
+ long_strange>5GeV :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 90.00%,  85.00%)
+____________________
+Experiment 8
+
+Pruning Threshold 0.025 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x0000014344DAF0D0>, 'T_decay': <function <lambda> at 0x0000014344DAF160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.025}
+Average number of iterations per convergence: 32.2
+614 tracks including       24 ghosts (  3.9%). Event average   4.1%
+              velo :      497 from      684 ( 72.7%,  78.8%)       36 clones (  7.24%), purity: ( 98.73%,  98.81%),  hitEff: ( 86.31%,  85.55%)
+              long :      165 from      172 ( 95.9%,  96.5%)       22 clones ( 13.33%), purity: ( 98.25%,  98.32%),  hitEff: ( 82.50%,  80.36%)
+         long>5GeV :      106 from      111 ( 95.5%,  95.7%)       16 clones ( 15.09%), purity: ( 98.53%,  98.35%),  hitEff: ( 82.55%,  79.08%)
+      long_strange :        6 from        7 ( 85.7%,  95.2%)        0 clones (  0.00%), purity: ( 98.72%,  97.44%),  hitEff: ( 98.15%,  97.22%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 94.44%,  94.44%)
+____________________
+Experiment 9
+
+Pruning Threshold 0.005 with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x0000013AF2F910D0>, 'T_decay': <function <lambda> at 0x0000013AF2F91160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.005}
+Average number of iterations per convergence: 34.0
+624 tracks including        3 ghosts (  0.5%). Event average   0.4%
+              velo :      472 from      684 ( 69.0%,  74.8%)      104 clones ( 22.03%), purity: ( 99.78%,  99.83%),  hitEff: ( 74.16%,  73.47%)
+              long :      161 from      172 ( 93.6%,  95.2%)       51 clones ( 31.68%), purity: ( 99.63%,  99.74%),  hitEff: ( 72.74%,  69.75%)
+         long>5GeV :      107 from      111 ( 96.4%,  96.5%)       28 clones ( 26.17%), purity: ( 99.56%,  99.67%),  hitEff: ( 75.92%,  71.54%)
+      long_strange :        6 from        7 ( 85.7%,  95.2%)        1 clones ( 16.67%), purity: (100.00%, 100.00%),  hitEff: ( 78.70%,  80.95%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 94.44%,  94.44%)
+____________________
+Experiment 10
+
+Pruning Threshold 0.005 only Monotone Constant with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x0000022F18590160>, 'T_decay': <function <lambda> at 0x0000022F185901F0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.005}
+Experiment 10
+
+Pruning Threshold 0.005 only Monotone Constant with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x000002801F17F160>, 'T_decay': <function <lambda> at 0x000002801F17F1F0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.005}
+Average number of iterations per convergence: 35.2
+640 tracks including       67 ghosts ( 10.5%). Event average  10.3%
+              velo :      489 from      684 ( 71.5%,  76.9%)       31 clones (  6.34%), purity: ( 97.68%,  97.79%),  hitEff: ( 86.49%,  85.80%)
+              long :      162 from      172 ( 94.2%,  90.3%)       17 clones ( 10.49%), purity: ( 97.58%,  97.45%),  hitEff: ( 84.44%,  82.61%)
+         long>5GeV :      104 from      111 ( 93.7%,  89.2%)       14 clones ( 13.46%), purity: ( 97.69%,  97.57%),  hitEff: ( 84.25%,  81.13%)
+      long_strange :        5 from        7 ( 71.4%,  90.5%)        0 clones (  0.00%), purity: ( 98.46%,  97.44%),  hitEff: ( 98.15%,  96.67%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 94.44%,  94.44%)
+____________________
+Experiment 11
+
+Pruning Threshold 0.001 only Monotone Constant with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x00000142FA420160>, 'T_decay': <function <lambda> at 0x00000142FA4201F0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.001}
+Average number of iterations per convergence: 33.45
+623 tracks including       33 ghosts (  5.3%). Event average   5.2%
+              velo :      506 from      684 ( 74.0%,  79.8%)       27 clones (  5.34%), purity: ( 98.47%,  98.50%),  hitEff: ( 87.59%,  86.88%)
+              long :      166 from      172 ( 96.5%,  97.2%)       17 clones ( 10.24%), purity: ( 98.39%,  98.47%),  hitEff: ( 84.04%,  82.25%)
+         long>5GeV :      108 from      111 ( 97.3%,  96.9%)       11 clones ( 10.19%), purity: ( 98.40%,  98.33%),  hitEff: ( 84.22%,  81.16%)
+      long_strange :        5 from        7 ( 71.4%,  90.5%)        0 clones (  0.00%), purity: ( 92.75%,  94.26%),  hitEff: ( 98.15%,  96.67%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: ( 90.48%,  90.48%),  hitEff: ( 94.44%,  94.44%)
+____________________
+Experiment 12
+
+Pruning Threshold 0.0005 only Monotone Constant with Below Mean Averaging
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 5, 'B': 5, 'B_decay': <function <lambda> at 0x000001F9BFF10160>, 'T_decay': <function <lambda> at 0x000001F9BFF101F0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.3, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.0005}
+Average number of iterations per convergence: 32.400000000000006
+622 tracks including       21 ghosts (  3.4%). Event average   3.2%
+              velo :      502 from      684 ( 73.4%,  79.2%)       40 clones (  7.97%), purity: ( 98.93%,  98.91%),  hitEff: ( 85.69%,  84.67%)
+              long :      166 from      172 ( 96.5%,  96.8%)       24 clones ( 14.46%), purity: ( 98.69%,  98.62%),  hitEff: ( 82.69%,  80.27%)
+         long>5GeV :      106 from      111 ( 95.5%,  95.7%)       15 clones ( 14.15%), purity: ( 98.60%,  98.46%),  hitEff: ( 83.55%,  80.59%)
+      long_strange :        6 from        7 ( 85.7%,  95.2%)        1 clones ( 16.67%), purity: ( 93.54%,  93.39%),  hitEff: ( 80.37%,  81.90%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: ( 94.44%,  94.44%),  hitEff: ( 91.11%,  91.11%)
+____________________
