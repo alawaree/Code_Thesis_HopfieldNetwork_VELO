@@ -25,9 +25,9 @@ Quick summary about the content of each file:
 
 2. Added by the MRP project
 
-- algorithms: a lot of algorithms added as well as some experiments
-- data_analysis: data analysis of the datasets 
-- visual: visuals of a lot of results
+- algorithms: a lot of algorithms added as well as the results of some experiments
+- data_analysis: data analysis of the datasets, algorithms used to generate events and graphs
+- visual: algorithms to create some visualisations, visuals of a lot of results already obtained
 - distance matrix
 - run_track_reconstruction_update: latest forwars research which completes complete track reconstruction process/method
 
