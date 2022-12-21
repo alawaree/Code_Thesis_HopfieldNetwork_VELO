@@ -1,3 +1,43 @@
+
+VELO tracking at the LHCb experiment using Hopfield networks
+============================================================
+
+
+This project is based on two previous projects:
+
+ - The first project was developed by Dr D. Campora who develops the SOTA algorithm for track reconstruction in the VELO detector of the LHCb experiment at CERN.
+
+ - The second project is an MRP that experimented others types of track reconstruction algorithms.
+
+
+Quick summary about the content of each file:
+---------------------------------------------
+1. Created by D. Campora
+
+- algorithms: algorithms that can be used for track reconstruction (graph_dfs, search_by_triplet_trie, track_following)
+- doc: picture
+- event_model: functions defining what is an event, a track, a hit, a module
+- events: datasets containing events used to perform the track reconstruction
+- validator: validator built to validate the results
+- visual : differents visualisers of the results
+- run_track_reconstruction: complete track reconstruction process/method
+
+
+2. Added by the MRP project
+
+- algorithms: a lot of algorithms added as well as some experiments
+- data_analysis: data analysis of the datasets 
+- visual: visuals of a lot of results
+- distance matrix
+- run_track_reconstruction_update: latest forwars research which completes complete track reconstruction process/method
+
+
+
+==============================
+Description of D. Campora project: 
+==============================
+
+
 Track reconstruction made easy
 ==============================
 
