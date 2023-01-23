@@ -1,8 +1,6 @@
 import os
 import json
-import event_model.event_model as em
 import random
-
 import sys
 from collections import defaultdict
 import matplotlib.pyplot as plt
@@ -11,6 +9,8 @@ import matplotlib.pyplot as plt
 project_root = os.path.abspath(os.path.join(__file__, "..", ".."))
 if project_root not in sys.path:
     sys.path.append(project_root)
+
+import event_model.event_model as em
 
 
 def get_events_from_folder(data_set_folder, num_events=None):
@@ -82,12 +82,33 @@ def read_tracks(file_name):
 def plot_tracks(tracks, title=None):
     [
         plt.plot(
-            [hit.z for hit in track.hits], [hit.y for hit in track.hits], color="b"
+            [hit.z for hit in track.hits], 
+            [hit.y for hit in track.hits], 
         )
         for track in tracks
     ]
     if title:
         plt.title(title)
+    plt.xlabel('z-axis')
+    plt.ylabel('y-axis')
+    plt.show()
+
+
+def plot_tracks3D(tracks, title=None):
+    ax = plt.axes(projection ='3d')
+    [
+        ax.plot3D(
+            [hit.z for hit in track.hits], 
+            [hit.x for hit in track.hits],
+            [hit.y for hit in track.hits],
+        )
+        for track in tracks
+    ]
+    if title:
+        plt.title(title)
+    ax.set_xlabel('z-axis')
+    ax.set_ylabel('x-axis')
+    ax.set_zlabel('y-axis');
     plt.show()
 
 
@@ -100,8 +121,16 @@ def plot_modules(modules, title=None):
         )
         for module in modules
     ]
-    min_y = min([min(module.hits(), key=lambda hit: hit.y).y for module in modules])
-    max_y = max([max(module.hits(), key=lambda hit: hit.y).y for module in modules])
+
+    for module in modules:
+        if module.hits() == []:
+            modules.remove(module)
+        else:
+            min_y = [min(module.hits(), key=lambda hit: hit.y).y for module in modules]
+            max_y = [max(module.hits(), key=lambda hit: hit.y).y for module in modules]
+    min_y = min(min_y)
+    max_y = max(max_y)
+
     [
         plt.plot(
             [sum([hit.z for hit in module.hits()]) / len(module.hits())] * 2,
@@ -109,8 +138,11 @@ def plot_modules(modules, title=None):
         )
         for module in modules
     ]
+    
     if title:
         plt.title(title)
+    plt.xlabel('z-axis')
+    plt.ylabel('y-axis')
     plt.show()
 
 
