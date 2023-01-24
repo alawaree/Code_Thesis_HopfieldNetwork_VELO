@@ -4,6 +4,7 @@ import random
 import sys
 from collections import defaultdict
 import matplotlib.pyplot as plt
+import statistics
 
 
 project_root = os.path.abspath(os.path.join(__file__, "..", ".."))
@@ -112,7 +113,9 @@ def plot_tracks3D(tracks, title=None):
     plt.show()
 
 
+#Fct to plot the modules and the hits in 2D (z-y)
 def plot_modules(modules, title=None):
+    #plot the hits
     [
         plt.scatter(
             [hit.z for hit in module.hits()],
@@ -122,28 +125,35 @@ def plot_modules(modules, title=None):
         for module in modules
     ]
 
+    #plot the modules
+    min_y_candidates = []
+    max_y_candidates = []
+
     for module in modules:
         if module.hits() == []:
             modules.remove(module)
         else:
-            min_y = [min(module.hits(), key=lambda hit: hit.y).y for module in modules]
-            max_y = [max(module.hits(), key=lambda hit: hit.y).y for module in modules]
-    min_y = min(min_y)
-    max_y = max(max_y)
+            min_y = [min(module.hits(), key=lambda hit: hit.y).y]
+            max_y = [max(module.hits(), key=lambda hit: hit.y).y]
+            min_y_candidates.append(min_y)
+            max_y_candidates.append(max_y)
+    min_y = min(min_y_candidates)
+    max_y = max(max_y_candidates)
 
-    [
-        plt.plot(
-            [sum([hit.z for hit in module.hits()]) / len(module.hits())] * 2,
-            [min_y, max_y],
-        )
-        for module in modules
-    ]
-    
+    for module in modules:
+        if module.hits() == []:
+            modules.remove(module)
+        else:
+            plt.plot(
+                [statistics.mean(module.z)] * 2,
+                [min_y, max_y],
+            )
     if title:
         plt.title(title)
     plt.xlabel('z-axis')
     plt.ylabel('y-axis')
     plt.show()
+
 
 
 def plot_tracks_and_modules(tracks, modules, colors=None, title=None):
