@@ -36,3 +36,9 @@ Average number of iterations per convergence: 11.25
       long_strange :        7 from        7 (100.0%, 100.0%)        0 clones (  0.00%), purity: ( 98.90%,  98.08%),  hitEff: ( 92.24%,  91.13%)
  long_strange>5GeV :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 92.46%,  92.26%)
 ____________________
+
+ Experiment B equal 100*T
+
+Modified network - Best Configuration 10 events from 'Samples_4492_to_22436_neurons' Test with 0.05 Pruning Threshold, no more constraint on the neurons 
+Number of events: 10
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001A23BAE00D0>, 'B_decay': <function <lambda> at 0x000001A23BAC0B80>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
