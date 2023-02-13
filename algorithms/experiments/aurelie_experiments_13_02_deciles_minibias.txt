@@ -1,0 +1,127 @@
+
+
+ Experiment Results of the HN for the 1st decile
+
+Upgraded network - Best Configuration Test with event 655, 1st decile of minibias
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 0.08, 'T_decay': <function <lambda> at 0x000002B3BC9B01F0>, 'B_decay': <function <lambda> at 0x000002B3BC9B08B0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 0 mins 3.98 seconds.
+Average number of iterations per convergence: 2.6 iterations. 
+
+IDs of the events: [655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655]  
+Number max_neurons in each event: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12] 
+Hopfield networks runtime by event: ['00:00'] 
+
+11 tracks including        0 ghosts (  0.0%). Event average   0.0%
+              velo :       11 from       11 (100.0%, 100.0%)        0 clones (  0.00%), purity: ( 98.86%,  98.86%),  hitEff: ( 98.48%,  98.48%)
+              long :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
+         long>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
+____________________
+
+ Experiment Results of the HN for the 1st decile
+
+Upgraded network - Best Configuration Test with event 655, 1st decile of minibias
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 0.08, 'T_decay': <function <lambda> at 0x000002B3BC9B01F0>, 'B_decay': <function <lambda> at 0x000002B3BC9B08B0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 0 mins 2.34 seconds.
+Average number of iterations per convergence: 2.35 iterations. 
+
+IDs of the events: [655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655, 655]  
+Number max_neurons in each event: [12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12] 
+Hopfield networks runtime by event: ['00:00'] 
+
+11 tracks including        0 ghosts (  0.0%). Event average   0.0%
+              velo :       11 from       11 (100.0%, 100.0%)        0 clones (  0.00%), purity: ( 98.86%,  98.86%),  hitEff: ( 98.48%,  98.48%)
+              long :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
+         long>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
+____________________
+
+ Experiment Results of the HN for the 1st decile
+
+Upgraded network - Best Configuration Test with event 655, 1st decile of minibias, TEST POUR LA BOUCLE EN BOUGEANT COUNT
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000019681089E50>, 'B_decay': <function <lambda> at 0x0000019681089D30>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 0 mins 0.18 seconds.
+Average number of iterations per convergence: 1.8 iterations. 
+
+IDs of the events: [655]  
+Number max_neurons in each event: [12] 
+Hopfield networks runtime by event: [] 
+
+
+ Experiment Results of the HN for the 1st decile
+
+Upgraded network - Best Configuration Test with event 655, 1st decile of minibias, TEST POUR LA BOUCLE EN BOUGEANT COUNT
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 0.08, 'T_decay': <function <lambda> at 0x0000019681089E50>, 'B_decay': <function <lambda> at 0x0000019681089D30>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+[INFO] Evaluate Event: c:\Users\aurel\Documents\GitHub\Code_Thesis_GitHub\Code_Thesis_GitHub/datasets/samples/minibias_deciles/velo_event_655
+
+starting instance 1 out of 1
+
+Number of max neurons: 12
+[INFO] Hopfield Networks initialized in 0 mins 0.00 seconds
+energy: -38.64099043402343
+energy: -38.64099043402343
+energy: -38.84348862124214
+energy: -38.64099043402343
+energy: -38.64099043402343
+energy: -38.64099043402343
+energy: -38.64099043402343
+energy: -38.84348862124214
+energy: -38.64099043402343
+energy: -38.64099043402343
+[HOPFIELD] converged network by below_mean after 0 mins 0.11 seconds; (energy: -38.68)
+energy: -22.91983937008341
+energy: -22.91983937008341
+energy: -22.91983937008341
+energy: -22.91983937008341
+energy: -22.91983937008341
+energy: -22.91983937008341
+energy: -22.91983937008341
+energy: -22.91983937008341
+energy: -22.91983937008341
+energy: -22.91983937008341
+[INFO] Evaluate Event: c:\Users\aurel\Documents\GitHub\Code_Thesis_GitHub\Code_Thesis_GitHub/datasets/samples/minibias_deciles/velo_event_769
+
+starting instance 1 out of 1
+
+Number of max neurons: 1369
+[INFO] Hopfield Networks initialized in 0 mins 4.46 seconds
+energy: -444.3684733315446
+energy: -405.53442576034274
+energy: -424.54097012158724
+energy: -357.6906455070735
+energy: -435.79299670451314
+energy: -453.8432726038617
+energy: -337.39776029034374
+energy: -423.9385612292252
+energy: -362.46938123692314
+energy: -457.6448545954174
+[HOPFIELD] converged network by below_mean after 4 mins 2.31 seconds; (energy: -410.32)
+energy: -544.4646097154332
+energy: -450.8417220019542
+energy: -412.3149408452401
+energy: -391.8252708538296
+energy: -395.4590323795297
+energy: -491.81390541550275
+energy: -412.18017953223
+energy: -437.61623239337223
+energy: -455.79675079980746
+energy: -472.25266082108413
+[HOPFIELD] converged network by below_mean after 5 mins 29.29 seconds; (energy: -446.46)
+[INFO] tracks extracted in 0 mins 0.14 seconds
+c:\Users\aurel\Documents\GitHub\Code_Thesis_GitHub\Code_Thesis_GitHub/algorithms/experiments/aurelie_experiments_13_02_deciles_minibias.txt
+Total time to run all the Hopfield Networks: 9 mins 37.07 seconds.
+Average number of iterations per convergence: 42.849999999999994 iterations. 
+
+IDs of the events: [655, 769]  
+Number max_neurons in each event: [12, 1369] 
+Hopfield networks runtime by event: ['09:36'] 
+
+154 tracks including        5 ghosts (  3.2%). Event average   3.2%
+              velo :      110 from      139 ( 79.1%,  79.1%)       12 clones ( 10.91%), purity: ( 98.27%,  98.27%),  hitEff: ( 79.80%,  79.80%)
+              long :       44 from       46 ( 95.7%,  95.7%)        8 clones ( 18.18%), purity: ( 98.63%,  98.63%),  hitEff: ( 73.86%,  73.86%)
+         long>5GeV :       31 from       32 ( 96.9%,  96.9%)        6 clones ( 19.35%), purity: ( 98.30%,  98.30%),  hitEff: ( 73.51%,  73.51%)
+      long_strange :        1 from        1 (100.0%, 100.0%)        1 clones (100.00%), purity: (100.00%, 100.00%),  hitEff: ( 54.17%,  54.17%)
+ long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        1 clones (100.00%), purity: (100.00%, 100.00%),  hitEff: ( 54.17%,  54.17%)
+____________________
