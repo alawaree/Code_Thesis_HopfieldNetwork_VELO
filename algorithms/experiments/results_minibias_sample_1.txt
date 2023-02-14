@@ -4,3 +4,31 @@
 Upgraded network - Best Configuration test on 10 events from the 1st sample of minibias dataset
 Number of events: 1
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001B797CAFEE0>, 'B_decay': <function <lambda> at 0x000001B797CAFF70>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 0 mins 51.40 seconds.
+Average number of iterations per convergence: 19.25 iterations. 
+
+ID of each event: [355]
+Number max_neurons by event: [361] 
+Hopfield networks runtime by event: ['00:00:51'] 
+
+76 tracks including        4 ghosts (  5.3%). Event average   5.3%
+              velo :       63 from       70 ( 90.0%,  90.0%)        3 clones (  4.76%), purity: ( 99.57%,  99.57%),  hitEff: ( 90.80%,  90.80%)
+              long :       22 from       23 ( 95.7%,  95.7%)        2 clones (  9.09%), purity: ( 99.65%,  99.65%),  hitEff: ( 90.07%,  90.07%)
+         long>5GeV :       11 from       11 (100.0%, 100.0%)        0 clones (  0.00%), purity: ( 99.24%,  99.24%),  hitEff: (100.00%, 100.00%)
+      long_strange :        2 from        2 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 90.00%,  90.00%)
+ long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
+____________________
+Total time to run all the Hopfield Networks: 0 mins 52.02 seconds.
+Average number of iterations per convergence: 19.55 iterations. 
+
+ID of each event: [355]
+Number max_neurons by event: [361] 
+Hopfield networks runtime by event: ['00:00:52'] 
+
+68 tracks including        4 ghosts (  5.9%). Event average   5.9%
+              velo :       57 from       70 ( 81.4%,  81.4%)        4 clones (  7.02%), purity: ( 99.20%,  99.20%),  hitEff: ( 82.72%,  82.72%)
+              long :       20 from       23 ( 87.0%,  87.0%)        4 clones ( 20.00%), purity: ( 99.02%,  99.02%),  hitEff: ( 79.39%,  79.39%)
+         long>5GeV :        9 from       11 ( 81.8%,  81.8%)        2 clones ( 22.22%), purity: ( 97.85%,  97.85%),  hitEff: ( 75.69%,  75.69%)
+      long_strange :        2 from        2 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 90.00%,  90.00%)
+ long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
+____________________

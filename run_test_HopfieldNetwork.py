@@ -920,7 +920,7 @@ def mse(network, tracks):
 # SAVE EXPERIMENT 
 def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
 
-    f = open(project_root + "/algorithms/experiments/" + exp_name + ".txt", "a")
+    f = open(project_root + "/results/" + exp_name + ".txt", "a")
     f.write(
         f"\n Experiment {exp_num}\n\n{desc}\nNumber of events: {nr_events}\nParameters: {p}\n"
     )
@@ -930,10 +930,10 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
         project_root + event_file_name,
         p,
         nr_events,
-        True,
-        project_root + "/algorithms/experiments/" + exp_name + ".txt",
+        False,
+        project_root + "/results/" + exp_name + ".txt",
     )
-    f = open(project_root + "/algorithms/experiments/" + exp_name + ".txt", "a")
+    f = open(project_root + "/results/" + exp_name + ".txt", "a")
 
 
 
