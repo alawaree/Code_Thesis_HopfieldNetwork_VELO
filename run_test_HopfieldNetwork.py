@@ -19,8 +19,6 @@ import math
 from pathlib import Path
 
 
-
-
 ########################## LOCAL DEPENDENCIES #################################
 
 filename = inspect.getframeinfo(inspect.currentframe()).filename
@@ -800,7 +798,7 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     #random.seed(40)
     #random.shuffle(all_events)
     count = 0
-    j = 853
+    j = 864
     
     while count < nr_events:
         i = all_events[j]
@@ -932,7 +930,7 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
         project_root + event_file_name,
         p,
         nr_events,
-        False,
+        True,
         project_root + "/algorithms/experiments/" + exp_name + ".txt",
     )
     f = open(project_root + "/algorithms/experiments/" + exp_name + ".txt", "a")
@@ -978,13 +976,12 @@ if __name__ == "__main__":
     }
 
 #################### RUN THE NETWORK #######################
-#print(project_root)
 
 save_experiment(
         "aurelie_experiments_14_02_python",
-        "Test of the code transfered in python",
-        "Upgraded network - Best Configuration with 1 selected event from minibias_decile",
+        "Test of the Hopfield network for the 9th decile",
+        "Modified network - Best Configuration test on the 9th decile event of minibias dataset",
         parameters,
-        "/datasets/samples/minibias_deciles/velo_event_",
+        "/datasets/samples/bsphiphi_deciles/velo_event_",
         1,
     )
