@@ -1,0 +1,48 @@
+
+ Experiment Test deciles minibias dataset
+
+Upgraded network - Best Configuration Test on 10 events from the deciles minibias datasets
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000026870EA4280>, 'B_decay': <function <lambda> at 0x0000026870EA44C0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test on 1 event
+
+Modified network - Best Configuration Test on 1st decile event
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000002EBA83A0310>, 'B_decay': <function <lambda> at 0x000002EBA83A0820>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test on 1 event
+
+Modified network - Best Configuration Test on 1st decile event
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000022A53711310>, 'B_decay': <function <lambda> at 0x0000022A53711280>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test on 1 event
+
+Modified network - Best Configuration Test on 1st decile event
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000002DC7FB923A0>, 'B_decay': <function <lambda> at 0x000002DC7FB92820>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment fucking test
+
+Modified network - Best Configuration 10 events from 'Samples_2784_to_4492_neurons' Test with 0.05 Pruning Threshold, no more constraint on the neurons 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000023B8B4E0310>, 'B_decay': <function <lambda> at 0x0000023B8B4E0700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test on 1 event (randomly choose, not selecte)
+
+Modified network - Best Configuration Test on one decile event
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001D9A37AE160>, 'B_decay': <function <lambda> at 0x000001D9C4422670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 5 mins 44.29 seconds.
+Average number of iterations per convergence: 24.95 iterations. 
+
+IDs of the events: [1, 936, 853]  
+Number max_neurons in each event: [3306, 7998, 484] 
+Hopfield networks runtime by event: ['04:18'] 
+
+85 tracks including        2 ghosts (  2.4%). Event average   2.4%
+              velo :       64 from       83 ( 77.1%,  77.1%)        6 clones (  9.38%), purity: ( 99.71%,  99.71%),  hitEff: ( 84.24%,  84.24%)
+              long :       26 from       30 ( 86.7%,  86.7%)        6 clones ( 23.08%), purity: (100.00%, 100.00%),  hitEff: ( 76.33%,  76.33%)
+         long>5GeV :       11 from       12 ( 91.7%,  91.7%)        4 clones ( 36.36%), purity: (100.00%, 100.00%),  hitEff: ( 68.84%,  68.84%)
+____________________
