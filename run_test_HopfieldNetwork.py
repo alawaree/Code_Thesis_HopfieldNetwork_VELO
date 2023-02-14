@@ -978,10 +978,10 @@ if __name__ == "__main__":
 #################### RUN THE NETWORK #######################
 
 save_experiment(
-        "results_minibias_sample_1",
-        "Test of the Hopfield network on the 1st sample minbibias dataset",
-        "Upgraded network - Best Configuration test on 10 events from the 1st sample of minibias dataset",
+        "results_minibias_samples",
+        "Test of the Hopfield network on the 2nd sample minbibias dataset",
+        "Upgraded network - Best Configuration test on 10 events from the 2nd sample of minibias dataset",
         parameters,
-        "/datasets/minibias_samples/Samples_12_to_484_neurons/velo_event_",
+        "/datasets/minibias_samples/Samples_504_to_928_neurons/velo_event_",
         10,
     )
