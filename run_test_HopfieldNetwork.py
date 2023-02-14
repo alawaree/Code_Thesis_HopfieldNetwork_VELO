@@ -25,7 +25,8 @@ from pathlib import Path
 
 filename = inspect.getframeinfo(inspect.currentframe()).filename
 file_path = os.path.dirname(os.path.abspath(filename))
-project_root = os.path.dirname(file_path)
+#project_root = os.path.dirname(file_path)
+project_root = file_path
 
 if project_root not in sys.path:
     sys.path.append(project_root)
@@ -799,7 +800,7 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     #random.seed(40)
     #random.shuffle(all_events)
     count = 0
-    j = 0
+    j = 853
     
     while count < nr_events:
         i = all_events[j]
@@ -876,7 +877,7 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
                     odd_hopfield.plot_network_results()
 
                 end_timing = time.time() - start_timing
-                end_timing_format = time.strftime("%M:%S", time.gmtime(end_timing))
+                end_timing_format = time.strftime("%H:%M:%S", time.gmtime(end_timing))
                 timing_tracking.append(end_timing_format)
                 count = count + 1
 
@@ -898,8 +899,8 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
             )
         print(f"Average number of iterations per convergence: {(iter_even+iter_odd)/2} iterations. \n")
 
-        print(f"IDs of the events: {id_events_tracking}  ")
-        print(f"Number max_neurons in each event: {nr_max_neurons_tracking} ")
+        print(f"ID of each event: {id_events_tracking}")
+        print(f"Number max_neurons by event: {nr_max_neurons_tracking} ")
         print(f"Hopfield networks runtime by event: {timing_tracking} \n")
         vl.validate_print(json_data_all_events, all_tracks, return_data=True)
         print("____________________")
@@ -918,7 +919,7 @@ def mse(network, tracks):
     true_network = Hopfield(modules=network.m, parameters=network.p, tracks=tracks)
     return ((network.N - true_network.N) ** 2).mean(axis=None)
 
-# SAVE EXPRIMENT 
+# SAVE EXPERIMENT 
 def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
 
     f = open(project_root + "/algorithms/experiments/" + exp_name + ".txt", "a")
@@ -931,7 +932,7 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
         project_root + event_file_name,
         p,
         nr_events,
-        True,
+        False,
         project_root + "/algorithms/experiments/" + exp_name + ".txt",
     )
     f = open(project_root + "/algorithms/experiments/" + exp_name + ".txt", "a")
@@ -977,13 +978,13 @@ if __name__ == "__main__":
     }
 
 #################### RUN THE NETWORK #######################
-print(project_root)
+#print(project_root)
 
-#save_experiment(
-#        "aurelie_experiments_14_02_python",
-#        "Test of the code transfered in python",
-#        "Upgraded network - Best Configuration with 2 events from Samples_0_to_713_neurons minibias",
-#        parameters,
-#        "/datasets/samples/minibias/Samples_0_to_713_neurons/velo_event_",
-#        2,
-#    )
+save_experiment(
+        "aurelie_experiments_14_02_python",
+        "Test of the code transfered in python",
+        "Upgraded network - Best Configuration with 1 selected event from minibias_decile",
+        parameters,
+        "/datasets/samples/minibias_deciles/velo_event_",
+        1,
+    )

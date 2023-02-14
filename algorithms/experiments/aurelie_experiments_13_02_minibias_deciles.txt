@@ -94,7 +94,7 @@ Average number of iterations per convergence: 49.95 iterations.
 
 IDs of the events: [13]  
 Number max_neurons in each event: [2968] 
-Hopfield networks runtime by event: ['23:38'] 
+Hopfield networks runtime by event: ['01:23:38'] 
 
 238 tracks including       19 ghosts (  8.0%). Event average   8.0%
               velo :      177 from      239 ( 74.1%,  74.1%)       25 clones ( 14.12%), purity: ( 98.66%,  98.66%),  hitEff: ( 76.60%,  76.60%)
@@ -116,7 +116,7 @@ Average number of iterations per convergence: 48.85 iterations.
 
 IDs of the events: [670]  
 Number max_neurons in each event: [3720] 
-Hopfield networks runtime by event: ['29:37'] 
+Hopfield networks runtime by event: ['02:29:37'] 
 
 280 tracks including       12 ghosts (  4.3%). Event average   4.3%
               velo :      228 from      311 ( 73.3%,  73.3%)       16 clones (  7.02%), purity: ( 98.38%,  98.38%),  hitEff: ( 79.19%,  79.19%)
@@ -138,7 +138,7 @@ Average number of iterations per convergence: 58.699999999999996 iterations.
 
 IDs of the events: [92]  
 Number max_neurons in each event: [4544] 
-Hopfield networks runtime by event: ['42:53'] 
+Hopfield networks runtime by event: ['02:42:53'] 
 
 270 tracks including       28 ghosts ( 10.4%). Event average  10.4%
               velo :      169 from      263 ( 64.3%,  64.3%)       29 clones ( 17.16%), purity: ( 98.44%,  98.44%),  hitEff: ( 71.42%,  71.42%)
@@ -160,7 +160,7 @@ Average number of iterations per convergence: 56.099999999999994 iterations.
 
 IDs of the events: [588]  
 Number max_neurons in each event: [5600] 
-Hopfield networks runtime by event: ['28:36'] 
+Hopfield networks runtime by event: ['04:28:36'] 
 
 307 tracks including       27 ghosts (  8.8%). Event average   8.8%
               velo :      226 from      342 ( 66.1%,  66.1%)       23 clones ( 10.18%), purity: ( 97.84%,  97.84%),  hitEff: ( 77.43%,  77.43%)
@@ -171,3 +171,9 @@ Hopfield networks runtime by event: ['28:36']
         long_fromb :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 79.17%,  79.17%)
    long_fromb>5GeV :        3 from        3 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 84.72%,  84.72%)
 ____________________
+
+ Experiment Test of the Hopfield network for the 9th decile
+
+Modified network - Best Configuration test on the 9th decile event of minibias dataset
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000023D03330820>, 'B_decay': <function <lambda> at 0x0000023D033308B0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
