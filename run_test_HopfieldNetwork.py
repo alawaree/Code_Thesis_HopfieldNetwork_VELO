@@ -1,3 +1,6 @@
+
+############################### INITIALISATION ##########################################
+# GENERAL LIBRARIES
 import json
 import os
 import sys
@@ -16,20 +19,32 @@ import math
 from pathlib import Path
 
 
-module_path = os.path.abspath(os.path.join('..'))
-if module_path not in sys.path:
-    sys.path.append(module_path)
 
 
-project_root = module_path
+########################## LOCAL DEPENDENCIES #################################
+
+filename = inspect.getframeinfo(inspect.currentframe()).filename
+file_path = os.path.dirname(os.path.abspath(filename))
+project_root = os.path.dirname(file_path)
+
+if project_root not in sys.path:
+    sys.path.append(project_root)
+
+#print(project_root)
+# PROJECT MODULES
+#module_path = os.path.abspath(os.path.join('..'))
+#if module_path not in sys.path:
+ #   sys.path.append(module_path)
 
 from event_model import event_model as em
 from validator import validator_lite as vl
 import data_analysis.event_generator as eg
 from visual.color_map import Colormap
 
+#project_root = module_path
 
 
+# CONTEXTS 
 @contextlib.contextmanager
 def nostdout():
     save_stdout = sys.stdout
@@ -38,7 +53,17 @@ def nostdout():
     sys.stdout = save_stdout
 
 
+# HELPER FUNCTIONS
+def get_polar_coordinates(x, y):
+    r = math.sqrt(x ** 2 + y ** 2)
+    phi = math.atan2(x, y)
+    if phi < 0:
+        phi = math.pi - phi
+    return r, phi
+
+
 ############################### BODY ##########################################
+# HOPFIELD NETWORK
 class Hopfield:
     def __init__(self, modules: list, parameters: dict, tracks: list = None):
         # set self variables, such as the maximum size
@@ -733,7 +758,7 @@ class Hopfield:
                 self.extracted_tracks, self.m, title="Hopfield Output"
             )
 
-
+# LOADING EVENTS
 def load_event(file_name, plot_event=False):
     f = open(file_name)
     json_data_event = json.loads(f.read())
@@ -757,7 +782,7 @@ def load_event(file_name, plot_event=False):
 
     return json_data_event, (modules_even, modules_odd)
 
-
+# EVALUATION OF THE EVENT TRACKS
 def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output_file=None):
 
     json_data_all_events = []
@@ -774,7 +799,7 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     #random.seed(40)
     #random.shuffle(all_events)
     count = 0
-    j = 223
+    j = 0
     
     while count < nr_events:
         i = all_events[j]
@@ -893,7 +918,7 @@ def mse(network, tracks):
     true_network = Hopfield(modules=network.m, parameters=network.p, tracks=tracks)
     return ((network.N - true_network.N) ** 2).mean(axis=None)
 
-
+# SAVE EXPRIMENT 
 def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
 
     f = open(project_root + "/algorithms/experiments/" + exp_name + ".txt", "a")
@@ -911,9 +936,11 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
     )
     f = open(project_root + "/algorithms/experiments/" + exp_name + ".txt", "a")
 
+
+
 if __name__ == "__main__":
     
-    #################### PARAMETERS #######################
+#################### PARAMETERS #######################
     parameters = {
         ### NEURONS ###
         "random_neuron_init": True,
@@ -949,12 +976,14 @@ if __name__ == "__main__":
         "pruning_tr": 0.05,
     }
 
+#################### RUN THE NETWORK #######################
+print(project_root)
 
-save_experiment(
-        "aurelie_experiments_13_02_newtest",
-        "TEST for bsphiphi deciles",
-        "Modified network - Best Configuration events",
-        parameters,
-        "/datasets/samples/bsphiphi_deciles/velo_event_",
-        1,
-    )
+#save_experiment(
+#        "aurelie_experiments_14_02_python",
+#        "Test of the code transfered in python",
+#        "Upgraded network - Best Configuration with 2 events from Samples_0_to_713_neurons minibias",
+#        parameters,
+#        "/datasets/samples/minibias/Samples_0_to_713_neurons/velo_event_",
+#        2,
+#    )
