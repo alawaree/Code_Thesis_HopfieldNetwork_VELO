@@ -133,3 +133,35 @@ Hopfield networks runtime by event: ['01:35:04']
       long_strange :        4 from        5 ( 80.0%,  80.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 97.50%,  97.50%)
  long_strange>5GeV :        2 from        3 ( 66.7%,  66.7%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 95.00%,  95.00%)
 ____________________
+
+ Experiment Test of the Hopfield network for the 8th decile
+
+Upgraded network - Best Configuration test on the 8th decile event of minibias dataset
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x00000191D9EA23A0>, 'B_decay': <function <lambda> at 0x00000191D9EA24C0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network for the 8th decile
+
+Upgraded network - Best Configuration test on the 8th decile event of minibias dataset
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x00000191B91610D0>, 'B_decay': <function <lambda> at 0x00000191DA32A0D0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 44 mins 53.50 seconds.
+Average number of iterations per convergence: 44.1 iterations. 
+
+IDs of each event: [122]
+Number max_neurons by event: [4288] 
+Hopfield networks runtime by event: ['00:44:53'] 
+
+186 tracks including       12 ghosts (  6.5%). Event average   6.5%
+              velo :      144 from      209 ( 68.9%,  68.9%)       16 clones ( 11.11%), purity: ( 99.01%,  99.01%),  hitEff: ( 79.44%,  79.44%)
+              long :       47 from       54 ( 87.0%,  87.0%)       12 clones ( 25.53%), purity: ( 98.46%,  98.46%),  hitEff: ( 72.12%,  72.12%)
+         long>5GeV :       29 from       34 ( 85.3%,  85.3%)        7 clones ( 24.14%), purity: ( 98.03%,  98.03%),  hitEff: ( 72.84%,  72.84%)
+      long_strange :        2 from        2 (100.0%, 100.0%)        1 clones ( 50.00%), purity: ( 93.33%,  93.33%),  hitEff: ( 66.67%,  66.67%)
+ long_strange>5GeV :        2 from        2 (100.0%, 100.0%)        1 clones ( 50.00%), purity: ( 93.33%,  93.33%),  hitEff: ( 66.67%,  66.67%)
+____________________
+
+ Experiment Test of the Hopfield network for the 9th decile
+
+Upgraded network - Best Configuration test on the 9th decile event of minibias dataset
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001FB17E700D0>, 'B_decay': <function <lambda> at 0x000001FB17E70160>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
