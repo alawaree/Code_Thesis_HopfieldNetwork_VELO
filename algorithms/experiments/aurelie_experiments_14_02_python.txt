@@ -62,3 +62,21 @@ ____________________
 Upgraded network - Best Configuration with 1 selected event from minibias_decile
 Number of events: 1
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000021CA0C2EEE0>, 'B_decay': <function <lambda> at 0x0000021CA0C2EF70>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the code transfered in python
+
+Upgraded network - Best Configuration with 1 selected event from minibias_decile
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7ff2970f75e0>, 'B_decay': <function <lambda> at 0x7ff2970f7670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 0 mins 53.32 seconds.
+Average number of iterations per convergence: 25.4 iterations. 
+
+ID of each event: [853]
+Number max_neurons by event: [484] 
+Hopfield networks runtime by event: ['00:00:53'] 
+
+82 tracks including        1 ghosts (  1.2%). Event average   1.2%
+              velo :       61 from       83 ( 73.5%,  73.5%)        8 clones ( 13.11%), purity: ( 99.71%,  99.71%),  hitEff: ( 81.81%,  81.81%)
+              long :       26 from       30 ( 86.7%,  86.7%)        6 clones ( 23.08%), purity: (100.00%, 100.00%),  hitEff: ( 76.46%,  76.46%)
+         long>5GeV :       11 from       12 ( 91.7%,  91.7%)        4 clones ( 36.36%), purity: (100.00%, 100.00%),  hitEff: ( 69.45%,  69.45%)
+____________________
