@@ -795,10 +795,10 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     start_time_networks = time.time() 
 
     all_events = [i for i in range(1000)]
-    #random.seed(40)
-    #random.shuffle(all_events)
+    random.seed(40)
+    random.shuffle(all_events)
     count = 0
-    j = 405
+    j = 0
     
     while count < nr_events:
         i = all_events[j]
@@ -978,10 +978,10 @@ if __name__ == "__main__":
 #################### RUN THE NETWORK #######################
 
 save_experiment(
-        "aurelie_experiments_14_02_python",
-        "Test of the Hopfield network for the 10th decile",
-        "Modified network - Best Configuration test on the 10th decile event of minibias dataset",
+        "results_minibias_sample_1",
+        "Test of the Hopfield network on the 1st sample minbibias dataset",
+        "Upgraded network - Best Configuration test on 10 events from the 1st sample of minibias dataset",
         parameters,
-        "/datasets/samples/bsphiphi_deciles/velo_event_",
-        1,
+        "/datasets/minibias_samples/Samples_12_to_484_neurons/velo_event_",
+        10,
     )
