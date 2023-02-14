@@ -798,7 +798,7 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     #random.seed(40)
     #random.shuffle(all_events)
     count = 0
-    j = 864
+    j = 405
     
     while count < nr_events:
         i = all_events[j]
@@ -979,8 +979,8 @@ if __name__ == "__main__":
 
 save_experiment(
         "aurelie_experiments_14_02_python",
-        "Test of the Hopfield network for the 9th decile",
-        "Modified network - Best Configuration test on the 9th decile event of minibias dataset",
+        "Test of the Hopfield network for the 10th decile",
+        "Modified network - Best Configuration test on the 10th decile event of minibias dataset",
         parameters,
         "/datasets/samples/bsphiphi_deciles/velo_event_",
         1,
