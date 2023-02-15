@@ -976,23 +976,20 @@ if __name__ == "__main__":
     }
 
 #################### RUN THE NETWORK #######################
-#1,2: "Samples_12_to_484_neurons", "Samples_504_to_928_neurons"
-
+#1,2,3,4: "Samples_12_to_484_neurons", "Samples_504_to_928_neurons","Samples_930_to_1369_neurons","Samples_1404_to_1920_neurons"
 
 #waiting
-#5 to 10
-#"Samples_1935_to_2600_neurons","Samples_2601_to_3304_neurons",
-#"Samples_3306_to_4284_neurons", "Samples_4288_to_5644_neurons",
+#9 and 10
 #"Samples_5680_to_7920_neurons","Samples_7998_to_26080_neurons"
 
 #run 3,4
-samples_dataset_minibias = ["Samples_930_to_1369_neurons","Samples_1404_to_1920_neurons"]
+samples_dataset_minibias = ["Samples_1935_to_2600_neurons","Samples_2601_to_3304_neurons","Samples_3306_to_4284_neurons", "Samples_4288_to_5644_neurons",]
 
 for index, sample in enumerate(samples_dataset_minibias):
     save_experiment(
         "results_minibias_samples",
-        f"Test of the Hopfield network on the {index+3}th sample minbibias dataset",
-        f"Upgraded network - Best Configuration test on 10 events from the {index+3}th sample of minibias dataset ({sample})",
+        f"Test of the Hopfield network on the {index+5}th sample minbibias dataset",
+        f"Upgraded network - Best Configuration test on 10 events from the {index+5}th sample of minibias dataset ({sample})",
         parameters,
         f"/datasets/minibias_samples/{sample}/velo_event_",
         10,
