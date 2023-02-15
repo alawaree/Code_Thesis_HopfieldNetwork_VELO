@@ -38,3 +38,9 @@ Hopfield networks runtime by event: ['00:00:38', '00:01:18', '00:02:01', '00:01:
       long_strange :       11 from       11 (100.0%, 100.0%)        1 clones (  9.09%), purity: ( 96.58%,  95.03%),  hitEff: ( 87.35%,  87.74%)
  long_strange>5GeV :        6 from        6 (100.0%, 100.0%)        0 clones (  0.00%), purity: ( 95.24%,  94.29%),  hitEff: ( 97.14%,  97.62%)
 ____________________
+
+ Experiment Test of the Hopfield network on the 10th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 10 events from the 10th sample of minibias dataset
+Number of events: 10
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7f8c1c07d4c0>, 'B_decay': <function <lambda> at 0x7f8c1c07d550>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
