@@ -979,9 +979,9 @@ if __name__ == "__main__":
 
 save_experiment(
         "results_minibias_samples",
-        "Test of the Hopfield network on the 2nd sample minbibias dataset",
-        "Upgraded network - Best Configuration test on 10 events from the 2nd sample of minibias dataset",
+        "Test of the Hopfield network on the 10th sample minbibias dataset",
+        "Upgraded network - Best Configuration test on 10 events from the 10th sample of minibias dataset",
         parameters,
-        "/datasets/minibias_samples/Samples_504_to_928_neurons/velo_event_",
+        "/datasets/minibias_samples/Samples_7998_to_26080_neurons/velo_event_",
         10,
     )
