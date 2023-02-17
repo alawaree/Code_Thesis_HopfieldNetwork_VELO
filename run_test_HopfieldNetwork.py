@@ -985,11 +985,11 @@ if __name__ == "__main__":
 # 9: "Samples_5680_to_7920_neurons"
 # 10:"Samples_7998_to_26080_neurons"
 
-samples_dataset_minibias = ["Samples_5680_to_7920_neurons"]
+samples_dataset_minibias = ["Samples_12_to_484_neurons"]
 
 for index, sample in enumerate(samples_dataset_minibias):
     save_experiment(
-        "results_minibias_samples",
+        "results_minibias_samples_test",
         f"Test of the Hopfield network on the {index+9}th sample minbibias dataset",
         f"Upgraded network - Best Configuration test on 5 events from the {index+9}th sample of minibias dataset ({sample})",
         parameters,
