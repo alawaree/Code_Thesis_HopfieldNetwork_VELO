@@ -985,7 +985,7 @@ if __name__ == "__main__":
 # 9: "Samples_5680_to_7920_neurons"
 # 10:"Samples_7998_to_26080_neurons"
 
-samples_dataset_minibias = ["Samples_12_to_484_neurons"]
+samples_dataset_minibias = ["Samples_4288_to_5644_neurons"]
 
 for index, sample in enumerate(samples_dataset_minibias):
     save_experiment(
