@@ -1,0 +1,150 @@
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000023C92C66670>, 'B_decay': <function <lambda> at 0x0000023C92C66700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001B071316670>, 'B_decay': <function <lambda> at 0x000001B071316700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000002787A0855E0>, 'B_decay': <function <lambda> at 0x000002787A085670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001F0620C2D30>, 'B_decay': <function <lambda> at 0x000001F0620C2DC0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x00000143F18C55E0>, 'B_decay': <function <lambda> at 0x00000143F18C5670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001E32A4F45E0>, 'B_decay': <function <lambda> at 0x000001E32A4F4670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x00000270F9E735E0>, 'B_decay': <function <lambda> at 0x00000270F9E73670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000023677D86670>, 'B_decay': <function <lambda> at 0x0000023677D86700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000002335C6E45E0>, 'B_decay': <function <lambda> at 0x000002335C6E4670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_504_to_928_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x00000133D58945E0>, 'B_decay': <function <lambda> at 0x00000133D5894670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1404_to_1920_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x00000295F5C835E0>, 'B_decay': <function <lambda> at 0x00000295F5C83670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1404_to_1920_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001C677A445E0>, 'B_decay': <function <lambda> at 0x000001C677A44670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1404_to_1920_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000019CDD8F35E0>, 'B_decay': <function <lambda> at 0x0000019CDD8F3670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1404_to_1920_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x00000205A1706670>, 'B_decay': <function <lambda> at 0x00000205A1706700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1404_to_1920_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001D6CA956670>, 'B_decay': <function <lambda> at 0x000001D6CA956700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000024A0F676670>, 'B_decay': <function <lambda> at 0x0000024A0F676700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000013E6D4D6670>, 'B_decay': <function <lambda> at 0x0000013E6D4D6700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000002DD56C255E0>, 'B_decay': <function <lambda> at 0x000002DD56C25670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001D26EC755E0>, 'B_decay': <function <lambda> at 0x000001D26EC75670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000002EED91975E0>, 'B_decay': <function <lambda> at 0x000002EED9197670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000002486B0F75E0>, 'B_decay': <function <lambda> at 0x000002486B0F7670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000001F7F17C6670>, 'B_decay': <function <lambda> at 0x000001F7F17C6700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x000002321F6965E0>, 'B_decay': <function <lambda> at 0x000002321F696670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x0000026722C465E0>, 'B_decay': <function <lambda> at 0x0000026722C46670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+
+ Experiment Test of the Hopfield network on the 2th sample minbibias dataset
+
+Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_1935_to_2600_neurons)
+Number of events: 5
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x00000250149A6670>, 'B_decay': <function <lambda> at 0x00000250149A6700>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
