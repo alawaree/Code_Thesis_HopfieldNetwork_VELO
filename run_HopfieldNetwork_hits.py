@@ -1010,7 +1010,7 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-samples_dataset_minibias = ["Samples_51_to_663_hits"]
+samples_dataset_minibias = ["Samples_51_to_663_hits", "Samples_664_to_978_hits", "Samples_980_to_1255_hits","Samples_1257_to_1549_hits"]
 
 for index, sample in enumerate(samples_dataset_minibias):
     save_experiment(
