@@ -17,7 +17,6 @@ import random
 import time
 import math
 from tqdm import tqdm
-
 from pathlib import Path
 
 
@@ -393,64 +392,7 @@ class Hopfield:
         )
         return sum(iter_list) / len(iter_list)
 
-    def tracks(self):
-        # What the papers say:  The answer is given by the final set of active Neurons
-        #                       All sets of Neurons connected together are considered as track candidates
-        #
-        # IDEA: All neurons that share a hit and are both connected are track candidates
-        global_candidates = []
-        global_candidate_states = []
 
-        for idx in range(self.modules_count - 2):
-            candidates = []
-            candidate_states = []
-            l1 = self.hit_counts[idx]  # number of hits in module 1
-            l2 = self.hit_counts[idx + 1]
-            l3 = self.hit_counts[idx + 2]
-
-            if self.p["maxActivation"]:
-                candidates = []
-                thresh = self.p["THRESHOLD"]
-
-                n1_transform = self.N[idx, : l2 * l1].reshape(l1, l2).T.copy()
-                n2_transform = self.N[idx + 1, : l3 * l2].reshape(l2, l3).T.copy()
-
-                for con in range(l2):  # loop over the connection hits in module 2
-                    # XXX i try swapping these....
-                    h1_idx = np.argmax(n1_transform[con, :])
-                    h3_idx = np.argmax(n2_transform[:, con])
-
-                    if (
-                        n1_transform[con, h1_idx] < thresh
-                        or n2_transform[h3_idx, con] < thresh
-                    ):
-                        continue
-
-                    hit1 = self.m[idx].hits()[h1_idx]
-                    hit2 = self.m[idx + 1].hits()[con]
-                    hit3 = self.m[idx + 2].hits()[h3_idx]
-                    candidates.append(em.track([hit1, hit2, hit3]))
-                    self.extracted_hits.add(hit1)
-                    self.extracted_hits.add(hit2)
-                    self.extracted_hits.add(hit3)
-                    # if we get the same state
-                    candidate_states.append(n1_transform[con, h1_idx])
-                    candidate_states.append(n2_transform[h3_idx, con])
-
-                    # XXX
-                    # this prevents the display of bifurcation?!
-                    # n1_transform[
-                    #    :, h1_idx
-                    # ] = 0  # set this hit to 0 so it's not chosen again
-                    # n2_transform[h3_idx, :] = 0
-
-            global_candidates += candidates
-            global_candidate_states += candidate_states
-
-        self.extracted_tracks = global_candidates
-        self.extracted_track_states = global_candidate_states
-
-        return global_candidates
 
     def full_tracks(self):
         # this will deal with stange angles!!!
@@ -993,11 +935,11 @@ if __name__ == "__main__":
 # 9: "Samples_5680_to_7920_neurons"
 # 10:"Samples_7998_to_26080_neurons"
 
-samples_dataset_minibias = ["Samples_7998_to_26080_neurons"]
+samples_dataset_minibias = ["Samples_504_to_928_neurons"]
 
 for index, sample in enumerate(samples_dataset_minibias):
     save_experiment(
-        "results_minibias_samples",
+        "results_minibias_samples_test",
         f"Test of the Hopfield network on the {index+10}th sample minbibias dataset",
         f"Upgraded network - Best Configuration test on 5 events from the {index+10}th sample of minibias dataset ({sample})",
         parameters,
