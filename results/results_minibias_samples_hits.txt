@@ -1,7 +1,7 @@
 
  Experiment Test of the Hopfield network on the 1th sample minibias dataset
 
-Upgraded network - Best Configuration test on 5 events from the 1th sample of minibias dataset (Samples_51_to_663_hits)
+Upgraded network - Best Configuration test on 10 events from the 1th sample of minibias dataset (Samples_51_to_663_hits)
 Number of events: 10
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7f60e98f5550>, 'B_decay': <function <lambda> at 0x7f60e98f55e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
 Total time to run all the Hopfield Networks: 2 mins 17.60 seconds.
@@ -22,7 +22,7 @@ ____________________
 
  Experiment Test of the Hopfield network on the 2th sample minibias dataset
 
-Upgraded network - Best Configuration test on 5 events from the 2th sample of minibias dataset (Samples_664_to_978_hits)
+Upgraded network - Best Configuration test on 10 events from the 2th sample of minibias dataset (Samples_664_to_978_hits)
 Number of events: 10
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 0.48, 'T_decay': <function <lambda> at 0x7f60e98f5550>, 'B_decay': <function <lambda> at 0x7f60e98f55e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
 Total time to run all the Hopfield Networks: 10 mins 35.34 seconds.
@@ -43,7 +43,7 @@ ____________________
 
  Experiment Test of the Hopfield network on the 3th sample minibias dataset
 
-Upgraded network - Best Configuration test on 5 events from the 3th sample of minibias dataset (Samples_980_to_1255_hits)
+Upgraded network - Best Configuration test on 10 events from the 3th sample of minibias dataset (Samples_980_to_1255_hits)
 Number of events: 10
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1.16, 'T_decay': <function <lambda> at 0x7f60e98f5550>, 'B_decay': <function <lambda> at 0x7f60e98f55e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
 Total time to run all the Hopfield Networks: 24 mins 2.32 seconds.
@@ -64,7 +64,7 @@ ____________________
 
  Experiment Test of the Hopfield network on the 4th sample minibias dataset
 
-Upgraded network - Best Configuration test on 5 events from the 4th sample of minibias dataset (Samples_1257_to_1549_hits)
+Upgraded network - Best Configuration test on 10 events from the 4th sample of minibias dataset (Samples_1257_to_1549_hits)
 Number of events: 10
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1.04, 'T_decay': <function <lambda> at 0x7f60e98f5550>, 'B_decay': <function <lambda> at 0x7f60e98f55e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
 Total time to run all the Hopfield Networks: 53 mins 7.94 seconds.
@@ -85,7 +85,7 @@ ____________________
 
  Experiment Test of the Hopfield network on the 5th sample minibias dataset
 
-Upgraded network - Best Configuration test on 5 events from the 5th sample of minibias dataset (Samples_1550_to_1812_hits)
+Upgraded network - Best Configuration test on 10 events from the 5th sample of minibias dataset (Samples_1550_to_1812_hits)
 Number of events: 10
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7fbcf1eb55e0>, 'B_decay': <function <lambda> at 0x7fbcf1eb5670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
 Total time to run all the Hopfield Networks: 89 mins 56.18 seconds.
@@ -106,7 +106,7 @@ ____________________
 
  Experiment Test of the Hopfield network on the 6th sample minibias dataset
 
-Upgraded network - Best Configuration test on 5 events from the 6th sample of minibias dataset (Samples_1819_to_2119_hits)
+Upgraded network - Best Configuration test on 10 events from the 6th sample of minibias dataset (Samples_1819_to_2119_hits)
 Number of events: 10
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1.24, 'T_decay': <function <lambda> at 0x7fbcf1eb55e0>, 'B_decay': <function <lambda> at 0x7fbcf1eb5670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
 Total time to run all the Hopfield Networks: 157 mins 25.64 seconds.
