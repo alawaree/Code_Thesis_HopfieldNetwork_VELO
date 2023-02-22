@@ -167,3 +167,30 @@ Hopfield networks runtime by event: ['00:46:43', '00:42:54', '00:46:03', '00:27:
  long_strange>5GeV :       22 from       25 ( 88.0%,  82.4%)        4 clones ( 18.18%), purity: (100.00%, 100.00%),  hitEff: ( 78.81%,  74.02%)
         long_fromb :        0 from        1 (  0.0%,   0.0%)        0 clones (  0.00%), purity: (  0.00%,   0.00%),  hitEff: (  0.00%,   0.00%)
 ____________________
+
+ Experiment Test of the Hopfield network on the 9th sample minibias dataset
+
+Upgraded network - Best Configuration test on 10 events from the 9th sample of minibias dataset (Samples_2854_to_3405_hits)
+Number of events: 10
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7f2965f645e0>, 'B_decay': <function <lambda> at 0x7f2965f64670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 723 mins 9.39 seconds.
+Average number of iterations per convergence: 56.8 iterations. 
+
+ID of each event: [504, 869, 326, 797, 836, 727, 594, 753, 280, 607]
+Number of hits by event: [3304, 3008, 3350, 2957, 2940, 3375, 2879, 2992, 3157, 2951] 
+Number of max_neurons by event: [7656, 5402, 7917, 6806, 5100, 8366, 6776, 5293, 7138, 6560] 
+Hopfield networks runtime by event: ['01:36:38', '01:06:27', '01:26:27', '01:00:10', '01:00:00', '01:36:06', '00:54:56', '00:53:49', '01:24:13', '01:04:19'] 
+
+3394 tracks including      357 ghosts ( 10.5%). Event average  10.5%
+              velo :     2466 from     3791 ( 65.0%,  67.1%)      301 clones ( 12.21%), purity: ( 98.21%,  98.21%),  hitEff: ( 74.98%,  74.94%)
+              long :      915 from     1070 ( 85.5%,  86.9%)      194 clones ( 21.20%), purity: ( 98.24%,  98.25%),  hitEff: ( 69.00%,  68.80%)
+         long>5GeV :      611 from      685 ( 89.2%,  89.5%)      145 clones ( 23.73%), purity: ( 98.14%,  98.15%),  hitEff: ( 67.43%,  67.32%)
+      long_strange :       39 from       51 ( 76.5%,  77.8%)        4 clones ( 10.26%), purity: ( 96.86%,  96.89%),  hitEff: ( 77.72%,  72.79%)
+ long_strange>5GeV :       22 from       27 ( 81.5%,  82.0%)        1 clones (  4.55%), purity: ( 97.02%,  98.04%),  hitEff: ( 78.98%,  75.60%)
+____________________
+
+ Experiment Test of the Hopfield network on the 10th sample minibias dataset
+
+Upgraded network - Best Configuration test on 10 events from the 10th sample of minibias dataset (Samples_3412_to_6786_hits)
+Number of events: 10
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 2.0, 'T_decay': <function <lambda> at 0x7f2965f645e0>, 'B_decay': <function <lambda> at 0x7f2965f64670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
