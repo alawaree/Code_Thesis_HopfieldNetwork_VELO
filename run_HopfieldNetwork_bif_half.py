@@ -542,7 +542,7 @@ class Hopfield:
                 out_tracks = out_tracks + [cand]
         return out_tracks
 
-    def mark_bifurcation_original(self):
+    def mark_bifurcation(self):
         zero = True
         max_activation = self.p["max_activation"]
         smart = self.p["smart"]
@@ -640,74 +640,7 @@ class Hopfield:
                     if smart:
                         max_activation = False
 
-                # right-left bifurcation
-                activation_mask = self.N[idx, : c1 * c2].reshape(c1, c2)[l_hit, :] > tr
-                if sum(activation_mask) > 1:
-                    affected_neurons = []
-                    affected_neurons_2 = []
-                    for i in range(c2):
-                        if activation_mask[i]:
-                            if zero:
-                                self.N[idx, (l_hit * c2) + i] = 0
-                            else:
-                                affected_neurons = affected_neurons + [(l_hit * c2) + i]
-                    if smart:  # i know there can be only one neuron on the right.
-                        if idx > 0:
-                            # can check here only for the first active neuron, because we removed
-                            # the other bifurcation in the previous iteration
-                            c0 = self.hit_counts[idx - 1]
-                            activation_mask_2 = (
-                                self.N[idx - 1, : c0 * c1].reshape(c0, c1)[:, l_hit]
-                                > tr
-                            )
-                            if sum(activation_mask_2) > 0:
-                                for i in range(
-                                    c0  # this was c0...
-                                ):  # loop over all nerons affected by bifurc
-                                    if activation_mask_2[i]:
-                                        affected_neurons_2 = affected_neurons_2 + [
-                                            c1 * i + l_hit
-                                        ]
 
-                                if len(affected_neurons_2) > 0:
-                                    max_val = 0
-                                    max_l = None
-                                    max_r = None
-                                    for e in affected_neurons_2:
-                                        for j in affected_neurons:
-                                            c = (
-                                                self.N[idx - 1, e]
-                                                * self.W[idx - 1, e, j]
-                                                * self.N[idx, j]
-                                            )
-                                            if self.p["only_weight"]:
-                                                c = self.W[idx - 1, e, j]
-                                            if c > max_val:
-                                                max_l = e
-                                                max_r = j
-                                                max_val = c
-                                        self.N[idx - 1, e] = 0
-                                for e in affected_neurons:
-                                    self.N[idx, j] = 0
-                                if max_r is not None and max_l is not None:
-                                    self.N[idx - 1, max_l] = 1
-                                    self.N[idx, max_r] = 1
-                            else:
-                                max_activation = True
-                        else:
-                            max_activation = True
-                        pass
-
-                    if max_activation:
-                        # check to the left or max score
-                        max_activation = self.N[idx, affected_neurons[0]]
-                        max_id = affected_neurons[0]
-                        for e in affected_neurons:
-                            if self.N[idx, e] >= max_activation:
-                                max_id = e
-                                max_activation = self.N[idx, e]
-                            self.N[idx, e] = 0
-                        self.N[idx, max_id] = 1    
         # converged, averaged neuron state
         # what do we want to do -> search all neurons wether there is bifurcation
         # how to search this, by the indices... and then we store it as a combination of hit id_s, and which side of this element the bifurcation occurs
@@ -1012,7 +945,7 @@ if __name__ == "__main__":
 
 save_experiment(
         "test_bifurc_fct",
-        f"Test of the Hopfield network on 1 event, original bifurcation fct",
+        f"Test of the Hopfield network on 1 event, half bifurcation fct",
         f"Upgraded network - Best Configuration test on event 3, half bifurcation fct from minibias dataset",
         parameters,
         f"/datasets/minibias/velo_event_",
