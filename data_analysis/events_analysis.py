@@ -345,24 +345,24 @@ def track_origin_analysis():
 if __name__ == '__main__':
     data_set = "minibias"
 
-    distribution_of_noise(safe_to_file=True)
-    noise_histogram(safe_to_file=True)
-    noise_histogram(density=True, safe_to_file=True)
+    distribution_of_noise(safe_to_file=False)
+    noise_histogram(safe_to_file=False)
+    noise_histogram(density=True, safe_to_file=False)
 
-    distribution_of_tracks(safe_to_file=True)
-    tracks_histogram(safe_to_file=True)
-    tracks_histogram(density=True, safe_to_file=True)
+    distribution_of_tracks(safe_to_file=False)
+    tracks_histogram(safe_to_file=False)
+    tracks_histogram(density=True, safe_to_file=False)
 
-    tracks_by_noise(safe_to_file=True)
+    tracks_by_noise(safe_to_file=False)
 
     data_set = "bsphiphi"
 
-    distribution_of_noise(safe_to_file=True)
-    noise_histogram(safe_to_file=True)
-    noise_histogram(density=True, safe_to_file=True)
+    distribution_of_noise(safe_to_file=False)
+    noise_histogram(safe_to_file=False)
+    noise_histogram(density=True, safe_to_file=False)
 
-    distribution_of_tracks(safe_to_file=True)
-    tracks_histogram(safe_to_file=True)
-    tracks_histogram(density=True, safe_to_file=True)
+    distribution_of_tracks(safe_to_file=False)
+    tracks_histogram(safe_to_file=False)
+    tracks_histogram(density=True, safe_to_file=False)
 
-    tracks_by_noise(safe_to_file=True)
+    tracks_by_noise(safe_to_file=False)

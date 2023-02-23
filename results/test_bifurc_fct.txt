@@ -1,0 +1,90 @@
+____________________
+Experiment with event 2 of minibias dataset - Original bifurcation
+Total time to run all the Hopfield Networks: 0 mins 23.27 seconds.
+Average number of iterations per convergence: 3.6 iterations. 
+
+ID of each event: [2]
+Number of hits by event: [135] 
+Number of max_neurons by event: [30] 
+Hopfield networks runtime by event: ['00:00:18'] 
+
+16 tracks including        1 ghosts (  6.2%). Event average   6.2%
+              velo :       12 from       12 (100.0%, 100.0%)        3 clones ( 25.00%), purity: ( 99.17%,  99.17%),  hitEff: ( 77.33%,  77.33%)
+              long :        7 from        7 (100.0%, 100.0%)        2 clones ( 28.57%), purity: (100.00%, 100.00%),  hitEff: ( 77.78%,  77.78%)
+         long>5GeV :        4 from        4 (100.0%, 100.0%)        1 clones ( 25.00%), purity: (100.00%, 100.00%),  hitEff: ( 80.00%,  80.00%)
+____________________
+Experiment with event 2 of minibias dataset - First half bifurcation
+Total time to run all the Hopfield Networks: 0 mins 2.08 seconds.
+Average number of iterations per convergence: 3.6 iterations. 
+
+ID of each event: [2]
+Number of hits by event: [135] 
+Number of max_neurons by event: [30] 
+Hopfield networks runtime by event: ['00:00:02'] 
+
+15 tracks including        0 ghosts (  0.0%). Event average   0.0%
+              velo :       12 from       12 (100.0%, 100.0%)        3 clones ( 25.00%), purity: ( 99.26%,  99.26%),  hitEff: ( 77.33%,  77.33%)
+              long :        7 from        7 (100.0%, 100.0%)        2 clones ( 28.57%), purity: (100.00%, 100.00%),  hitEff: ( 76.67%,  76.67%)
+         long>5GeV :        4 from        4 (100.0%, 100.0%)        1 clones ( 25.00%), purity: (100.00%, 100.00%),  hitEff: ( 80.00%,  80.00%)
+____________________
+Experiment with event 0 of minibias dataset - Original bifurcation (run on new bootstrap)
+Total time to run all the Hopfield Networks: 5 mins 59.46 seconds.
+Average number of iterations per convergence: 30.75 iterations. 
+
+ID of each event: [0]
+Number of hits by event: [996] 
+Number of max_neurons by event: [1444] 
+Hopfield networks runtime by event: ['00:05:57'] 
+
+133 tracks including        5 ghosts (  3.8%). Event average   3.8%
+              velo :      106 from      134 ( 79.1%,  79.1%)       14 clones ( 13.21%), purity: ( 98.42%,  98.42%),  hitEff: ( 79.29%,  79.29%)
+              long :       21 from       22 ( 95.5%,  95.5%)        4 clones ( 19.05%), purity: ( 99.56%,  99.56%),  hitEff: ( 75.71%,  75.71%)
+         long>5GeV :        7 from        8 ( 87.5%,  87.5%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 84.69%,  84.69%)
+
+____________________
+Experiment with event 0 of minibias dataset - Half bifurcation (run on new bootstrap)
+Total time to run all the Hopfield Networks: 5 mins 32.21 seconds.
+Average number of iterations per convergence: 31.95 iterations. 
+
+ID of each event: [0]
+Number of hits by event: [996] 
+Number of max_neurons by event: [1444] 
+Hopfield networks runtime by event: ['00:05:28'] 
+
+145 tracks including        6 ghosts (  4.1%). Event average   4.1%
+              velo :      114 from      134 ( 85.1%,  85.1%)       16 clones ( 14.04%), purity: ( 98.59%,  98.59%),  hitEff: ( 78.16%,  78.16%)
+              long :       22 from       22 (100.0%, 100.0%)        5 clones ( 22.73%), purity: ( 99.59%,  99.59%),  hitEff: ( 76.71%,  76.71%)
+         long>5GeV :        8 from        8 (100.0%, 100.0%)        1 clones ( 12.50%), purity: (100.00%, 100.00%),  hitEff: ( 83.33%,  83.33%)
+____________________
+Experiment with event 1 of minibias dataset - Original bifurcation (run on new bootstrap)
+Total time to run all the Hopfield Networks: 103 mins 48.88 seconds.
+Average number of iterations per convergence: 51.3 iterations. 
+
+ID of each event: [1]
+Number of hits by event: [2422] 
+Number of max_neurons by event: [3306] 
+Hopfield networks runtime by event: ['01:43:48'] 
+
+285 tracks including       32 ghosts ( 11.2%). Event average  11.2%
+              velo :      208 from      295 ( 70.5%,  70.5%)       20 clones (  9.62%), purity: ( 98.43%,  98.43%),  hitEff: ( 77.41%,  77.41%)
+              long :       76 from       86 ( 88.4%,  88.4%)       14 clones ( 18.42%), purity: ( 98.71%,  98.71%),  hitEff: ( 71.00%,  71.00%)
+         long>5GeV :       59 from       62 ( 95.2%,  95.2%)       14 clones ( 23.73%), purity: ( 98.56%,  98.56%),  hitEff: ( 67.44%,  67.44%)
+      long_strange :        3 from        5 ( 60.0%,  60.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 93.33%,  93.33%)
+ long_strange>5GeV :        2 from        3 ( 66.7%,  66.7%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 90.00%,  90.00%)
+____________________
+Experiment with event 1 of minibias dataset - Helf bifurcation (run on new bootstrap)
+Total time to run all the Hopfield Networks: 117 mins 50.67 seconds.
+Average number of iterations per convergence: 50.2 iterations. 
+
+ID of each event: [1]
+Number of hits by event: [2422] 
+Number of max_neurons by event: [3306] 
+Hopfield networks runtime by event: ['01:57:50'] 
+
+282 tracks including       28 ghosts (  9.9%). Event average   9.9%
+              velo :      209 from      295 ( 70.8%,  70.8%)       22 clones ( 10.53%), purity: ( 98.42%,  98.42%),  hitEff: ( 78.14%,  78.14%)
+              long :       78 from       86 ( 90.7%,  90.7%)       12 clones ( 15.38%), purity: ( 98.37%,  98.37%),  hitEff: ( 76.77%,  76.77%)
+         long>5GeV :       58 from       62 ( 93.5%,  93.5%)       11 clones ( 18.97%), purity: ( 98.35%,  98.35%),  hitEff: ( 74.62%,  74.62%)
+      long_strange :        4 from        5 ( 80.0%,  80.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 95.00%,  95.00%)
+ long_strange>5GeV :        2 from        3 ( 66.7%,  66.7%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 90.00%,  90.00%)
+____________________
