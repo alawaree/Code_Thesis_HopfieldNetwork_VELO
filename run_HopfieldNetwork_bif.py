@@ -542,7 +542,7 @@ class Hopfield:
                 out_tracks = out_tracks + [cand]
         return out_tracks
 
-    def mark_bifurcation_original(self):
+    def mark_bifurcation(self):
         zero = True
         max_activation = self.p["max_activation"]
         smart = self.p["smart"]
@@ -707,7 +707,8 @@ class Hopfield:
                                 max_id = e
                                 max_activation = self.N[idx, e]
                             self.N[idx, e] = 0
-                        self.N[idx, max_id] = 1    
+                        self.N[idx, max_id] = 1
+
         # converged, averaged neuron state
         # what do we want to do -> search all neurons wether there is bifurcation
         # how to search this, by the indices... and then we store it as a combination of hit id_s, and which side of this element the bifurcation occurs
@@ -805,11 +806,11 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     #random.seed(40)
     #random.shuffle(all_events)
     count = 0
-    j = 3
+    j = 2
     
     while count < nr_events:
         i = all_events[j]
-        j += 1
+        j += 3
 
         try:
             size = os.path.getsize(file_name + str(i) + ".json")
@@ -1009,13 +1010,11 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-
 save_experiment(
         "test_bifurc_fct",
         f"Test of the Hopfield network on 1 event, original bifurcation fct",
-        f"Upgraded network - Best Configuration test on event 3, half bifurcation fct from minibias dataset",
+        f"Upgraded network - Best Configuration test on event 3, original bifurcation fct from minibias dataset",
         parameters,
         f"/datasets/minibias/velo_event_",
         1,
     )
-
