@@ -1,0 +1,75 @@
+
+ Experiment Test of the Hopfield network on the 1th sample bsphiphi dataset
+
+Upgraded network - Best Configuration test on 10 events from the 1th sample of bsphiphi dataset (Samples_336_to_1118_hits)
+Number of events: 10
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7f4d49403550>, 'B_decay': <function <lambda> at 0x7f4d494035e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 12 mins 57.24 seconds.
+Average number of iterations per convergence: 21.5 iterations. 
+
+ID of each event: [988, 721, 705, 55, 413, 515, 353, 216, 752, 753]
+Number of hits by event: [1116, 957, 1062, 751, 459, 819, 706, 1038, 687, 747] 
+Number of max_neurons by event: [1640, 728, 858, 550, 304, 899, 600, 957, 638, 600] 
+Hopfield networks runtime by event: ['00:02:59', '00:01:31', '00:02:02', '00:00:53', '00:00:10', '00:01:15', '00:00:52', '00:01:55', '00:00:35', '00:00:40'] 
+
+981 tracks including       50 ghosts (  5.1%). Event average   4.9%
+              velo :      780 from     1005 ( 77.6%,  77.5%)       53 clones (  6.79%), purity: ( 98.71%,  98.75%),  hitEff: ( 86.91%,  86.70%)
+              long :      306 from      325 ( 94.2%,  94.4%)       30 clones (  9.80%), purity: ( 98.63%,  98.71%),  hitEff: ( 85.65%,  84.81%)
+         long>5GeV :      193 from      203 ( 95.1%,  95.8%)       18 clones (  9.33%), purity: ( 98.15%,  98.21%),  hitEff: ( 85.95%,  85.64%)
+      long_strange :       14 from       16 ( 87.5%,  83.9%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 91.93%,  90.04%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  87.5%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 93.75%,  91.67%)
+        long_fromb :       39 from       44 ( 88.6%,  89.8%)        6 clones ( 15.38%), purity: ( 97.30%,  97.88%),  hitEff: ( 80.44%,  81.12%)
+   long_fromb>5GeV :       27 from       30 ( 90.0%,  90.8%)        3 clones ( 11.11%), purity: ( 95.94%,  95.33%),  hitEff: ( 87.06%,  84.93%)
+____________________
+
+ Experiment Test of the Hopfield network on the 2th sample bsphiphi dataset
+
+Upgraded network - Best Configuration test on 10 events from the 2th sample of bsphiphi dataset (Samples_1130_to_1450_hits)
+Number of events: 10
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 0.92, 'T_decay': <function <lambda> at 0x7f4d49403550>, 'B_decay': <function <lambda> at 0x7f4d494035e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 42 mins 33.86 seconds.
+Average number of iterations per convergence: 35.0 iterations. 
+
+ID of each event: [484, 580, 548, 17, 694, 665, 727, 1, 314, 710]
+Number of hits by event: [1425, 1396, 1366, 1318, 1450, 1184, 1166, 1156, 1443, 1130] 
+Number of max_neurons by event: [1404, 1292, 1978, 1122, 2116, 1155, 1089, 1560, 1444, 1023] 
+Hopfield networks runtime by event: ['00:05:00', '00:04:43', '00:05:26', '00:03:58', '00:06:27', '00:03:38', '00:02:38', '00:02:42', '00:05:11', '00:02:46'] 
+
+1491 tracks including       85 ghosts (  5.7%). Event average   5.8%
+              velo :     1159 from     1472 ( 78.7%,  77.1%)      117 clones ( 10.09%), purity: ( 98.68%,  98.69%),  hitEff: ( 81.45%,  81.22%)
+              long :      456 from      491 ( 92.9%,  91.8%)       70 clones ( 15.35%), purity: ( 98.67%,  98.67%),  hitEff: ( 78.58%,  78.05%)
+         long>5GeV :      308 from      321 ( 96.0%,  95.3%)       55 clones ( 17.86%), purity: ( 98.32%,  98.31%),  hitEff: ( 76.60%,  76.43%)
+      long_strange :       22 from       26 ( 84.6%,  93.6%)        5 clones ( 22.73%), purity: ( 99.72%,  99.86%),  hitEff: ( 78.54%,  73.93%)
+ long_strange>5GeV :       12 from       14 ( 85.7%,  90.6%)        1 clones (  8.33%), purity: (100.00%, 100.00%),  hitEff: ( 86.57%,  85.36%)
+        long_fromb :       61 from       64 ( 95.3%,  92.7%)        8 clones ( 13.11%), purity: ( 98.66%,  98.76%),  hitEff: ( 78.30%,  78.71%)
+   long_fromb>5GeV :       52 from       54 ( 96.3%,  92.4%)        8 clones ( 15.38%), purity: ( 98.46%,  98.45%),  hitEff: ( 78.05%,  77.27%)
+____________________
+
+ Experiment Test of the Hopfield network on the 3th sample bsphiphi dataset
+
+Upgraded network - Best Configuration test on 10 events from the 3th sample of bsphiphi dataset (Samples_1451_to_1739_hits)
+Number of events: 10
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 0.88, 'T_decay': <function <lambda> at 0x7f4d49403550>, 'B_decay': <function <lambda> at 0x7f4d494035e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 78 mins 34.81 seconds.
+Average number of iterations per convergence: 36.150000000000006 iterations. 
+
+ID of each event: [792, 95, 642, 229, 683, 637, 723, 388, 849, 607]
+Number of hits by event: [1665, 1597, 1637, 1565, 1581, 1460, 1607, 1739, 1584, 1494] 
+Number of max_neurons by event: [1722, 2756, 1720, 1974, 1849, 1936, 2024, 2475, 1806, 1720] 
+Hopfield networks runtime by event: ['00:08:15', '00:10:56', '00:07:17', '00:06:54', '00:06:39', '00:07:26', '00:07:59', '00:10:05', '00:07:13', '00:05:45'] 
+
+1775 tracks including      118 ghosts (  6.6%). Event average   6.7%
+              velo :     1352 from     1912 ( 70.7%,  70.0%)      144 clones ( 10.65%), purity: ( 98.54%,  98.55%),  hitEff: ( 80.05%,  79.98%)
+              long :      502 from      554 ( 90.6%,  88.7%)       92 clones ( 18.33%), purity: ( 98.58%,  98.63%),  hitEff: ( 74.95%,  74.63%)
+         long>5GeV :      327 from      349 ( 93.7%,  91.7%)       61 clones ( 18.65%), purity: ( 98.43%,  98.51%),  hitEff: ( 73.66%,  73.47%)
+      long_strange :       19 from       26 ( 73.1%,  77.0%)        4 clones ( 21.05%), purity: ( 98.03%,  98.56%),  hitEff: ( 74.13%,  66.25%)
+ long_strange>5GeV :       11 from       15 ( 73.3%,  79.9%)        2 clones ( 18.18%), purity: ( 97.62%,  98.97%),  hitEff: ( 65.90%,  61.98%)
+        long_fromb :       42 from       48 ( 87.5%,  88.5%)        8 clones ( 19.05%), purity: ( 99.44%,  99.60%),  hitEff: ( 70.31%,  72.42%)
+   long_fromb>5GeV :       35 from       38 ( 92.1%,  94.1%)        7 clones ( 20.00%), purity: ( 99.34%,  99.51%),  hitEff: ( 70.03%,  72.25%)
+____________________
+
+ Experiment Test of the Hopfield network on the 4th sample bsphiphi dataset
+
+Upgraded network - Best Configuration test on 10 events from the 4th sample of bsphiphi dataset (Samples_1740_to_2004_hits)
+Number of events: 10
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1.6400000000000001, 'T_decay': <function <lambda> at 0x7f4d49403550>, 'B_decay': <function <lambda> at 0x7f4d494035e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
