@@ -149,3 +149,31 @@ Hopfield networks runtime by event: ['01:15:15']
          long>5GeV :       51 from       57 ( 89.5%,  89.5%)       12 clones ( 23.53%), purity: ( 98.62%,  98.62%),  hitEff: ( 66.75%,  66.75%)
       long_strange :        3 from        5 ( 60.0%,  60.0%)        1 clones ( 33.33%), purity: ( 95.00%,  95.00%),  hitEff: ( 71.15%,  71.15%)
 ____________________
+Experiment with event 3 of minibias dataset - Original bifurcation (run on new bootstrap)
+Total time to run all the Hopfield Networks: 0 mins 2.01 seconds.
+Average number of iterations per convergence: 3.6 iterations. 
+
+ID of each event: [2]
+Number of hits by event: [135] 
+Number of max_neurons by event: [30] 
+Hopfield networks runtime by event: ['00:00:01'] 
+
+15 tracks including        1 ghosts (  6.7%). Event average   6.7%
+              velo :       11 from       12 ( 91.7%,  91.7%)        3 clones ( 27.27%), purity: ( 99.11%,  99.11%),  hitEff: ( 78.57%,  78.57%)
+              long :        7 from        7 (100.0%, 100.0%)        2 clones ( 28.57%), purity: (100.00%, 100.00%),  hitEff: ( 77.78%,  77.78%)
+         long>5GeV :        4 from        4 (100.0%, 100.0%)        1 clones ( 25.00%), purity: (100.00%, 100.00%),  hitEff: ( 80.00%,  80.00%)
+____________________
+Experiment with event 3 of minibias dataset - Original bifurcation (run on new bootstrap)
+Total time to run all the Hopfield Networks: 0 mins 1.38 seconds.
+Average number of iterations per convergence: 3.6 iterations. 
+
+ID of each event: [2]
+Number of hits by event: [135] 
+Number of max_neurons by event: [30] 
+Hopfield networks runtime by event: ['00:00:01'] 
+
+16 tracks including        1 ghosts (  6.2%). Event average   6.2%
+              velo :       12 from       12 (100.0%, 100.0%)        3 clones ( 25.00%), purity: ( 99.17%,  99.17%),  hitEff: ( 77.33%,  77.33%)
+              long :        7 from        7 (100.0%, 100.0%)        2 clones ( 28.57%), purity: (100.00%, 100.00%),  hitEff: ( 77.78%,  77.78%)
+         long>5GeV :        4 from        4 (100.0%, 100.0%)        1 clones ( 25.00%), purity: (100.00%, 100.00%),  hitEff: ( 80.00%,  80.00%)
+____________________
