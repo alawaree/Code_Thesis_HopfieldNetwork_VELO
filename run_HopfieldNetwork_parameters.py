@@ -1048,11 +1048,28 @@ for pruning_tr in pruning_tr_values:
     }
          
         save_experiment(
-                "results_minibias_5th_sample_parameters_pr_tr",
+                "results_minibias_7th_sample_parameters_pr_tr",
                 f"Test of the Hopfield network on the 5th sample minibias dataset",
-                f"Upgraded network - Best Configuration test on 5 events from the 5th sample of minibias dataset Samples_1550_to_1812_hits with {pruning_tr}",
+                f"Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with {pruning_tr}",
                 parameters,
-                f"/datasets/samples/minibias_samples_hits/Samples_1550_to_1812_hits/velo_event_",
+                f"/datasets/samples/minibias_samples_hits/Samples_2121_to_2464_hits/velo_event_",
                 10,
 
     )
+
+#################### RUN THE NETWORK ON HITS #######################
+
+#MINIBIAS
+# 1,2: "Samples_51_to_663_hits", "Samples_664_to_978_hits"
+# 3,4: "Samples_980_to_1255_hits","Samples_1257_to_1549_hits"
+# 5,6: "Samples_1550_to_1812_hits","Samples_1819_to_2119_hits",
+# 7,8: "Samples_2121_to_2464_hits","Samples_2468_to_2853_hits"
+# 9: "Samples_2854_to_3405_hits"
+# 10:"Samples_3412_to_6786_hits"
+
+#BSPHIPHI
+#1,2: "Samples_336_to_1118_hits", "Samples_1130_to_1450_hits"
+#3,4: "Samples_1451_to_1739_hits","Samples_1740_to_2004_hits"
+#5,6: "Samples_2015_to_2257_hits", "Samples_2258_to_2552_hits"
+#7,8: "Samples_2553_to_2851_hits", "Samples_2852_to_3258_hits"
+#9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
