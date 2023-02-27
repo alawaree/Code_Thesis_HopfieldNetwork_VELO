@@ -1009,7 +1009,7 @@ if __name__ == "__main__":
 #7,8: "Samples_2553_to_2851_hits", "Samples_2852_to_3258_hits"
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
-pruning_tr_values = np.linspace(0.1, 1, 10).round(2).tolist()
+pruning_tr_values = np.linspace(0.001, 0.010, 10).round(2).tolist()
 
 for pruning_tr in pruning_tr_values:
         parameters = {
