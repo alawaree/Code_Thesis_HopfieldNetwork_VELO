@@ -1009,9 +1009,9 @@ if __name__ == "__main__":
 #7,8: "Samples_2553_to_2851_hits", "Samples_2852_to_3258_hits"
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
-pruning_tr_values = np.linspace(0.01, 0.1, 10).round(2).tolist()
+THRESHOLD_values = np.linspace(0.1, 1, 10).round(2).tolist()
 
-for pruning_tr in pruning_tr_values:
+for tr_value in THRESHOLD_values:
         parameters = {
         ### NEURONS ###
         "random_neuron_init": True,
@@ -1033,7 +1033,7 @@ for pruning_tr in pruning_tr_values:
         "fully_randomized_updates": False,
         #### THRESHOLD ###
         "maxActivation": True,
-        "THRESHOLD": 0.2,
+        "THRESHOLD": tr_value,
         ##### CONVERGENCE ###
         "convergence_threshold": 0.00000005,
         "bootstrap_iters": 10,
@@ -1044,13 +1044,13 @@ for pruning_tr in pruning_tr_values:
         "max_activation": False,
         ###### Track prunning #######
         # here we could set the threshold
-        "pruning_tr": pruning_tr, 
+        "pruning_tr": 0.1, 
     }
          
         save_experiment(
-                "results_minibias_7th_sample_parameters_pr_tr",
-                f"Test of the Hopfield network on the 5th sample minibias dataset",
-                f"Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with {pruning_tr}",
+                "results_minibias_7th_sample_parameters_TRESH",
+                f"Test of the Hopfield network on the 5th sample minibias dataset, change in THRESHOLD",
+                f"Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with {tr_value}",
                 parameters,
                 f"/datasets/samples/minibias_samples_hits/Samples_2121_to_2464_hits/velo_event_",
                 10,
