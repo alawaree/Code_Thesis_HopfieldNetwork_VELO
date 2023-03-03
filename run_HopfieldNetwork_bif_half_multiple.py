@@ -640,74 +640,6 @@ class Hopfield:
                     if smart:
                         max_activation = False
 
-                # right-left bifurcation
-                activation_mask = self.N[idx, : c1 * c2].reshape(c1, c2)[l_hit, :] > tr
-                if sum(activation_mask) > 1:
-                    affected_neurons = []
-                    affected_neurons_2 = []
-                    for i in range(c2):
-                        if activation_mask[i]:
-                            if zero:
-                                self.N[idx, (l_hit * c2) + i] = 0
-                            else:
-                                affected_neurons = affected_neurons + [(l_hit * c2) + i]
-                    if smart:  # i know there can be only one neuron on the right.
-                        if idx > 0:
-                            # can check here only for the first active neuron, because we removed
-                            # the other bifurcation in the previous iteration
-                            c0 = self.hit_counts[idx - 1]
-                            activation_mask_2 = (
-                                self.N[idx - 1, : c0 * c1].reshape(c0, c1)[:, l_hit]
-                                > tr
-                            )
-                            if sum(activation_mask_2) > 0:
-                                for i in range(
-                                    c0  # this was c0...
-                                ):  # loop over all nerons affected by bifurc
-                                    if activation_mask_2[i]:
-                                        affected_neurons_2 = affected_neurons_2 + [
-                                            c1 * i + l_hit
-                                        ]
-
-                                if len(affected_neurons_2) > 0:
-                                    max_val = 0
-                                    max_l = None
-                                    max_r = None
-                                    for e in affected_neurons_2:
-                                        for j in affected_neurons:
-                                            c = (
-                                                self.N[idx - 1, e]
-                                                * self.W[idx - 1, e, j]
-                                                * self.N[idx, j]
-                                            )
-                                            if self.p["only_weight"]:
-                                                c = self.W[idx - 1, e, j]
-                                            if c > max_val:
-                                                max_l = e
-                                                max_r = j
-                                                max_val = c
-                                        self.N[idx - 1, e] = 0
-                                for e in affected_neurons:
-                                    self.N[idx, j] = 0
-                                if max_r is not None and max_l is not None:
-                                    self.N[idx - 1, max_l] = 1
-                                    self.N[idx, max_r] = 1
-                            else:
-                                max_activation = True
-                        else:
-                            max_activation = True
-                        pass
-
-                    if max_activation:
-                        # check to the left or max score
-                        max_activation = self.N[idx, affected_neurons[0]]
-                        max_id = affected_neurons[0]
-                        for e in affected_neurons:
-                            if self.N[idx, e] >= max_activation:
-                                max_id = e
-                                max_activation = self.N[idx, e]
-                            self.N[idx, e] = 0
-                        self.N[idx, max_id] = 1
 
         # converged, averaged neuron state
         # what do we want to do -> search all neurons wether there is bifurcation
@@ -802,11 +734,11 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     timing_tracking = []
     start_time_networks = time.time() 
 
-    all_events = [i for i in range(995)]
-    random.seed(40)
-    random.shuffle(all_events)
+    all_events = [i for i in range(1000)]
+    #random.seed(40)
+    #random.shuffle(all_events)
     count = 0
-    j = 5
+    j = 0
     
     while count < nr_events:
         i = all_events[j]
@@ -953,10 +885,10 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
     f = open(project_root + "/results/" + exp_name + ".txt", "a")
 
 
-#######################################################################################################=
+
 if __name__ == "__main__":
-
-
+    
+#################### PARAMETERS #######################
     parameters = {
         ### NEURONS ###
         "random_neuron_init": True,
@@ -989,7 +921,7 @@ if __name__ == "__main__":
         "max_activation": False,
         ###### Track prunning #######
         # here we could set the threshold
-        "pruning_tr": 0.2, 
+        "pruning_tr": 0.05,
     }
 
 #################### RUN THE NETWORK ON HITS #######################
@@ -1009,67 +941,15 @@ if __name__ == "__main__":
 #7,8: "Samples_2553_to_2851_hits", "Samples_2852_to_3258_hits"
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
-THRESHOLD_values = np.linspace(0.01, 0.1, 10).round(2).tolist()
+datasets = ['samples/minibias_samples_hits/Samples_deciles','samples/bsphiphi_samples_hits/Samples_deciles']
 
-for tr_value in THRESHOLD_values:
-        parameters = {
-        ### NEURONS ###
-        "random_neuron_init": True,
-        "binary_states": False,  # try it out once maybe but scrap it
-        ### WEIGHTS ###
-        "ALPHA": 1,
-        "BETA": 10,
-        "GAMMA": 10,
-        "narrowness": 200,
-        "constant_factor": 0.9,
-        "monotone_constant_factor": 0.9,
-        #### UPDATE ###
-        "T": 1e-8,  # try to experiment with these rather
-        "B": 1e-6,  # try to experiment with these rather
-        "T_decay": lambda t: max(1e-8, t * 0.01),  # try to remove these
-        "B_decay": lambda t: max(1e-4, t * 0.04),  # try to remove these
-        "decay_off": False,  # using this
-        "randomized_updates": True,
-        "fully_randomized_updates": False,
-        #### THRESHOLD ###
-        "maxActivation": True,
-        "THRESHOLD": tr_value,
-        ##### CONVERGENCE ###
-        "convergence_threshold": 0.00000005,
-        "bootstrap_iters": 10,
-        "bootstrap_method": "below_mean",
-        ###### BIFURC REMOVAL #####
-        "smart": True,
-        "only_weight": False,
-        "max_activation": False,
-        ###### Track prunning #######
-        # here we could set the threshold
-        "pruning_tr": 0.1, 
-    }
-         
-        save_experiment(
-                "results_minibias_7th_sample_parameters_TRESH",
-                f"Test of the Hopfield network on the 5th sample minibias dataset, change in THRESHOLD",
-                f"Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with {tr_value}",
-                parameters,
-                f"/datasets/samples/minibias_samples_hits/Samples_2121_to_2464_hits/velo_event_",
-                10,
-
+for dataset in datasets:
+    save_experiment(
+        "test_bifurc_fct_half_multiple",
+        f"Test of the Hopfield network on 10 event, half bifurcation fct",
+        f"Upgraded network - Best Configuration test on {dataset}, half bifurcation fct",
+        parameters,
+        f"/datasets/{dataset}/velo_event_",
+        10,
     )
 
-#################### RUN THE NETWORK ON HITS #######################
-
-#MINIBIAS
-# 1,2: "Samples_51_to_663_hits", "Samples_664_to_978_hits"
-# 3,4: "Samples_980_to_1255_hits","Samples_1257_to_1549_hits"
-# 5,6: "Samples_1550_to_1812_hits","Samples_1819_to_2119_hits",
-# 7,8: "Samples_2121_to_2464_hits","Samples_2468_to_2853_hits"
-# 9: "Samples_2854_to_3405_hits"
-# 10:"Samples_3412_to_6786_hits"
-
-#BSPHIPHI
-#1,2: "Samples_336_to_1118_hits", "Samples_1130_to_1450_hits"
-#3,4: "Samples_1451_to_1739_hits","Samples_1740_to_2004_hits"
-#5,6: "Samples_2015_to_2257_hits", "Samples_2258_to_2552_hits"
-#7,8: "Samples_2553_to_2851_hits", "Samples_2852_to_3258_hits"
-#9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"

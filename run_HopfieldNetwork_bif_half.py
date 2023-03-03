@@ -738,7 +738,7 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     #random.seed(40)
     #random.shuffle(all_events)
     count = 0
-    j = 4
+    j = 5
     
     while count < nr_events:
         i = all_events[j]
@@ -946,7 +946,7 @@ if __name__ == "__main__":
 save_experiment(
         "test_bifurc_fct_temp",
         f"Test of the Hopfield network on 1 event, half bifurcation fct",
-        f"Upgraded network - Best Configuration test on event 4, half bifurcation fct from minibias dataset",
+        f"Upgraded network - Best Configuration test on event 5, half bifurcation fct from minibias dataset",
         parameters,
         f"/datasets/minibias/velo_event_",
         1,
