@@ -170,3 +170,23 @@ Hopfield networks runtime by event: ['01:07:19']
          long>5GeV :       42 from       45 ( 93.3%,  93.3%)       11 clones ( 26.19%), purity: ( 99.45%,  99.45%),  hitEff: ( 70.68%,  70.68%)
       long_strange :        1 from        2 ( 50.0%,  50.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 88.89%,  88.89%)
 ____________________
+ Experiment Test of the Hopfield network on 1 event, original bifurcation fct
+
+Upgraded network - Best Configuration test on event 5, original bifurcation fct from minibias dataset
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7f5e9ffa05e0>, 'B_decay': <function <lambda> at 0x7f5e9ffa0670>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 80 mins 11.95 seconds.
+Average number of iterations per convergence: 64.05 iterations. 
+
+ID of each event: [5]
+Number of hits by event: [3147] 
+Number of max_neurons by event: [6715] 
+Hopfield networks runtime by event: ['01:20:11'] 
+
+322 tracks including       42 ghosts ( 13.0%). Event average  13.0%
+              velo :      224 from      393 ( 57.0%,  57.0%)       32 clones ( 14.29%), purity: ( 97.83%,  98.21%),  hitEff: ( 72.74%,  72.74%)
+              long :      102 from      128 ( 79.7%,  79.7%)       22 clones ( 21.57%), purity: ( 98.03%,  98.03%),  hitEff: ( 67.95%,  67.95%)
+         long>5GeV :       67 from       80 ( 83.8%,  83.8%)       16 clones ( 23.88%), purity: ( 97.59%,  97.59%),  hitEff: ( 65.25%,  65.25%)
+      long_strange :        3 from        7 ( 42.9%,  42.9%)        0 clones (  0.00%), purity: ( 90.48%,  90.48%),  hitEff: ( 87.78%,  87.78%)
+ long_strange>5GeV :        3 from        5 ( 60.0%,  60.0%)        0 clones (  0.00%), purity: ( 90.48%,  90.48%),  hitEff: ( 87.78%,  87.78%)
+____________________
