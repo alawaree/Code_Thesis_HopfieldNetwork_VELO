@@ -1020,8 +1020,8 @@ decile_subset_minibias = [888, 27, 756, 18, 411, 390, 266, 696, 560, 885]
 for event in decile_subset_minibias:
     save_experiment(
         "results_original_bifurcation_minibias_deciles",
-        f"Test of the Hopfield network on the minibias dataset",
-        f"Upgraded network - Run on EVENT {event} of the minibias dataset deciles",
+        f"Test of the Hopfield network on the minibias dataset with the ORIGINAL BIFURCATION ",
+        f"Upgraded network - Run on EVENT {event} of the minibias dataset deciles with the ORIGINAL BIFURCATION ",
         parameters,
         f"/datasets/minibias/velo_event_",
         event,
