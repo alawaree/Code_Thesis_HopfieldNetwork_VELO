@@ -319,7 +319,7 @@ class Hopfield:
         t += 1
         self.energies.append(self.energy())
         
-        pbar = tqdm(total=55)
+        pbar = tqdm(total=100)
         while (
             abs(abs(self.energies[-2]) - abs(self.energies[-1]))
             >= self.p["convergence_threshold"]
@@ -789,7 +789,7 @@ def load_event(file_name, plot_event=False):
     return json_data_event, (modules_even, modules_odd)
 
 # EVALUATION OF THE EVENT TRACKS
-def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output_file=None):
+def evaluate_events(file_name, parameters, id_event, nr_events=1, plot_event=False, output_file=None):
 
     json_data_all_events = []
     all_tracks = []
@@ -802,11 +802,11 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     timing_tracking = []
     start_time_networks = time.time() 
 
-    all_events = [i for i in range(995)]
+    all_events = [i for i in range(1000)]
     #random.seed(40)
     #random.shuffle(all_events)
     count = 0
-    j = 0
+    j = id_event
     
     while count < nr_events:
         i = all_events[j]
@@ -935,7 +935,7 @@ def mse(network, tracks):
     return ((network.N - true_network.N) ** 2).mean(axis=None)
 
 # SAVE EXPERIMENT 
-def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
+def save_experiment(exp_name, exp_num, desc, p, event_file_name, id_event, nr_events):
 
     f = open(project_root + "/results/" + exp_name + ".txt", "a")
     f.write(
@@ -946,6 +946,7 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
     evaluate_events(
         project_root + event_file_name,
         p,
+        id_event,
         nr_events,
         False,
         project_root + "/results/" + exp_name + ".txt",
@@ -1010,14 +1011,19 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-datasets = ['samples/minibias_samples_hits/Samples_deciles','samples/bsphiphi_samples_hits/Samples_deciles']
+#samples_dataset_minibias = ["Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"]
 
-for dataset in datasets:
+#for index, sample in enumerate(samples_dataset_minibias):
+decile_subset_bsphiphi =  [51, 710, 180, 250, 266, 64, 141, 308, 50, 453]
+decile_subset_minibias = [888, 27, 756, 18, 411, 390, 266, 696, 560, 885]
+
+for event in decile_subset_minibias:
     save_experiment(
-        "test_bifurc_fct_multiple",
-        f"Test of the Hopfield network on 10 event, original bifurcation fct",
-        f"Upgraded network - Best Configuration test on {dataset}, original bifurcation fct",
+        "results_original_bifurcation_minibias_deciles",
+        f"Test of the Hopfield network on the minibias dataset",
+        f"Upgraded network - Run on EVENT {event} of the minibias dataset deciles",
         parameters,
-        f"/datasets/{dataset}/velo_event_",
-        10,
+        f"/datasets/minibias/velo_event_",
+        event,
+        1,
     )

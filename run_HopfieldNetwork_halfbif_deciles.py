@@ -319,7 +319,7 @@ class Hopfield:
         t += 1
         self.energies.append(self.energy())
         
-        pbar = tqdm(total=55)
+        pbar = tqdm(total=100)
         while (
             abs(abs(self.energies[-2]) - abs(self.energies[-1]))
             >= self.p["convergence_threshold"]
@@ -640,74 +640,7 @@ class Hopfield:
                     if smart:
                         max_activation = False
 
-                # right-left bifurcation
-                activation_mask = self.N[idx, : c1 * c2].reshape(c1, c2)[l_hit, :] > tr
-                if sum(activation_mask) > 1:
-                    affected_neurons = []
-                    affected_neurons_2 = []
-                    for i in range(c2):
-                        if activation_mask[i]:
-                            if zero:
-                                self.N[idx, (l_hit * c2) + i] = 0
-                            else:
-                                affected_neurons = affected_neurons + [(l_hit * c2) + i]
-                    if smart:  # i know there can be only one neuron on the right.
-                        if idx > 0:
-                            # can check here only for the first active neuron, because we removed
-                            # the other bifurcation in the previous iteration
-                            c0 = self.hit_counts[idx - 1]
-                            activation_mask_2 = (
-                                self.N[idx - 1, : c0 * c1].reshape(c0, c1)[:, l_hit]
-                                > tr
-                            )
-                            if sum(activation_mask_2) > 0:
-                                for i in range(
-                                    c0  # this was c0...
-                                ):  # loop over all nerons affected by bifurc
-                                    if activation_mask_2[i]:
-                                        affected_neurons_2 = affected_neurons_2 + [
-                                            c1 * i + l_hit
-                                        ]
-
-                                if len(affected_neurons_2) > 0:
-                                    max_val = 0
-                                    max_l = None
-                                    max_r = None
-                                    for e in affected_neurons_2:
-                                        for j in affected_neurons:
-                                            c = (
-                                                self.N[idx - 1, e]
-                                                * self.W[idx - 1, e, j]
-                                                * self.N[idx, j]
-                                            )
-                                            if self.p["only_weight"]:
-                                                c = self.W[idx - 1, e, j]
-                                            if c > max_val:
-                                                max_l = e
-                                                max_r = j
-                                                max_val = c
-                                        self.N[idx - 1, e] = 0
-                                for e in affected_neurons:
-                                    self.N[idx, j] = 0
-                                if max_r is not None and max_l is not None:
-                                    self.N[idx - 1, max_l] = 1
-                                    self.N[idx, max_r] = 1
-                            else:
-                                max_activation = True
-                        else:
-                            max_activation = True
-                        pass
-
-                    if max_activation:
-                        # check to the left or max score
-                        max_activation = self.N[idx, affected_neurons[0]]
-                        max_id = affected_neurons[0]
-                        for e in affected_neurons:
-                            if self.N[idx, e] >= max_activation:
-                                max_id = e
-                                max_activation = self.N[idx, e]
-                            self.N[idx, e] = 0
-                        self.N[idx, max_id] = 1
+                
 
         # converged, averaged neuron state
         # what do we want to do -> search all neurons wether there is bifurcation
@@ -789,7 +722,7 @@ def load_event(file_name, plot_event=False):
     return json_data_event, (modules_even, modules_odd)
 
 # EVALUATION OF THE EVENT TRACKS
-def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output_file=None):
+def evaluate_events(file_name, parameters, id_event, nr_events=1, plot_event=False, output_file=None):
 
     json_data_all_events = []
     all_tracks = []
@@ -802,11 +735,11 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
     timing_tracking = []
     start_time_networks = time.time() 
 
-    all_events = [i for i in range(995)]
+    all_events = [i for i in range(1000)]
     #random.seed(40)
     #random.shuffle(all_events)
     count = 0
-    j = 5
+    j = id_event
     
     while count < nr_events:
         i = all_events[j]
@@ -935,7 +868,7 @@ def mse(network, tracks):
     return ((network.N - true_network.N) ** 2).mean(axis=None)
 
 # SAVE EXPERIMENT 
-def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
+def save_experiment(exp_name, exp_num, desc, p, event_file_name, id_event, nr_events):
 
     f = open(project_root + "/results/" + exp_name + ".txt", "a")
     f.write(
@@ -946,6 +879,7 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
     evaluate_events(
         project_root + event_file_name,
         p,
+        id_event,
         nr_events,
         False,
         project_root + "/results/" + exp_name + ".txt",
@@ -1010,11 +944,19 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-save_experiment(
-        "test_bifurc_fct",
-        f"Test of the Hopfield network on 1 event, original bifurcation fct",
-        f"Upgraded network - Best Configuration test on event 5, original bifurcation fct from minibias dataset",
+#samples_dataset_minibias = ["Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"]
+
+#for index, sample in enumerate(samples_dataset_minibias):
+decile_subset_bsphiphi =  [51, 710, 180, 250, 266, 64, 141, 308, 50, 453]
+decile_subset_minibias = [888, 27, 756, 18, 411, 390, 266, 696, 560, 885]
+
+for event in decile_subset_minibias:
+    save_experiment(
+        "results_half_bifurcation_minibias_deciles",
+        f"Test of the Hopfield network on the minibias dataset",
+        f"Upgraded network - Run on EVENT {event} of the minibias dataset deciles",
         parameters,
         f"/datasets/minibias/velo_event_",
+        event,
         1,
     )
