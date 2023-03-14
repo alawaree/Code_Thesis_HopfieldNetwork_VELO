@@ -1017,13 +1017,13 @@ if __name__ == "__main__":
 decile_subset_bsphiphi =  [51, 710, 180, 250, 266, 64, 141, 308, 50, 453]
 decile_subset_minibias = [888, 27, 756, 18, 411, 390, 266, 696, 560, 885]
 
-for event in decile_subset_minibias:
+for event in decile_subset_bsphiphi:
     save_experiment(
-        "results_original_bifurcation_minibias_deciles",
-        f"Test of the Hopfield network on the minibias dataset with the ORIGINAL BIFURCATION ",
-        f"Upgraded network - Run on EVENT {event} of the minibias dataset deciles with the ORIGINAL BIFURCATION ",
+        "results_original_bifurcation_bsphiphi_deciles",
+        f"Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION ",
+        f"Upgraded network - Run on EVENT {event} of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION ",
         parameters,
-        f"/datasets/minibias/velo_event_",
+        f"/datasets/bsphiphi/velo_event_",
         event,
         1,
     )
