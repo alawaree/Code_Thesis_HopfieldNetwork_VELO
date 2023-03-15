@@ -1,0 +1,224 @@
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 51 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 0 mins 5.10 seconds.
+Average number of iterations per convergence: 14.8 iterations. 
+
+ID of each event: [51]
+Number of hits by event: [336] 
+Number of max_neurons by event: [225] 
+Hopfield networks runtime by event: ['00:00:05'] 
+
+44 tracks including        4 ghosts (  9.1%). Event average   9.1%
+              velo :       28 from       37 ( 75.7%,  75.7%)        2 clones (  7.14%), purity: ( 99.05%,  99.05%),  hitEff: ( 85.76%,  85.76%)
+              long :        8 from        9 ( 88.9%,  88.9%)        1 clones ( 12.50%), purity: (100.00%, 100.00%),  hitEff: ( 81.87%,  81.87%)
+         long>5GeV :        7 from        7 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 90.98%,  90.98%)
+        long_fromb :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 86.71%,  86.71%)
+   long_fromb>5GeV :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 86.71%,  86.71%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 710 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 0.48, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 3 mins 3.52 seconds.
+Average number of iterations per convergence: 33.3 iterations. 
+
+ID of each event: [710]
+Number of hits by event: [1130] 
+Number of max_neurons by event: [1023] 
+Hopfield networks runtime by event: ['00:03:03'] 
+
+132 tracks including        7 ghosts (  5.3%). Event average   5.3%
+              velo :      104 from      138 ( 75.4%,  75.4%)        8 clones (  7.69%), purity: ( 98.44%,  98.44%),  hitEff: ( 87.08%,  87.08%)
+              long :       44 from       47 ( 93.6%,  93.6%)        5 clones ( 11.36%), purity: ( 98.04%,  98.04%),  hitEff: ( 85.55%,  85.55%)
+         long>5GeV :       27 from       27 (100.0%, 100.0%)        4 clones ( 14.81%), purity: ( 96.90%,  96.90%),  hitEff: ( 82.55%,  82.55%)
+      long_strange :        3 from        5 ( 60.0%,  60.0%)        0 clones (  0.00%), purity: ( 91.67%,  91.67%),  hitEff: ( 91.67%,  91.67%)
+ long_strange>5GeV :        2 from        2 (100.0%, 100.0%)        0 clones (  0.00%), purity: ( 87.50%,  87.50%),  hitEff: ( 87.50%,  87.50%)
+        long_fromb :        7 from        7 (100.0%, 100.0%)        2 clones ( 28.57%), purity: ( 98.15%,  98.15%),  hitEff: ( 76.85%,  76.85%)
+   long_fromb>5GeV :        5 from        5 (100.0%, 100.0%)        2 clones ( 40.00%), purity: ( 97.62%,  97.62%),  hitEff: ( 70.24%,  70.24%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 180 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1.32, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 5 mins 59.26 seconds.
+Average number of iterations per convergence: 35.1 iterations. 
+
+ID of each event: [180]
+Number of hits by event: [1454] 
+Number of max_neurons by event: [2352] 
+Hopfield networks runtime by event: ['00:05:59'] 
+
+161 tracks including        7 ghosts (  4.3%). Event average   4.3%
+              velo :      134 from      191 ( 70.2%,  70.2%)        8 clones (  5.97%), purity: ( 98.10%,  98.10%),  hitEff: ( 82.17%,  82.17%)
+              long :       45 from       54 ( 83.3%,  83.3%)        6 clones ( 13.33%), purity: ( 98.36%,  98.36%),  hitEff: ( 77.60%,  77.60%)
+         long>5GeV :       27 from       29 ( 93.1%,  93.1%)        5 clones ( 18.52%), purity: ( 97.70%,  97.70%),  hitEff: ( 74.41%,  74.41%)
+        long_fromb :        5 from        7 ( 71.4%,  71.4%)        1 clones ( 20.00%), purity: (100.00%, 100.00%),  hitEff: ( 73.91%,  73.91%)
+   long_fromb>5GeV :        3 from        4 ( 75.0%,  75.0%)        1 clones ( 33.33%), purity: (100.00%, 100.00%),  hitEff: ( 69.20%,  69.20%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 250 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1.04, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 9 mins 44.87 seconds.
+Average number of iterations per convergence: 44.7 iterations. 
+
+ID of each event: [250]
+Number of hits by event: [1740] 
+Number of max_neurons by event: [1892] 
+Hopfield networks runtime by event: ['00:09:44'] 
+
+201 tracks including       15 ghosts (  7.5%). Event average   7.5%
+              velo :      151 from      204 ( 74.0%,  74.0%)       10 clones (  6.62%), purity: ( 98.77%,  98.77%),  hitEff: ( 81.48%,  81.48%)
+              long :       49 from       50 ( 98.0%,  98.0%)        3 clones (  6.12%), purity: ( 98.19%,  98.19%),  hitEff: ( 82.22%,  82.22%)
+         long>5GeV :       36 from       37 ( 97.3%,  97.3%)        2 clones (  5.56%), purity: ( 98.16%,  98.16%),  hitEff: ( 84.35%,  84.35%)
+        long_fromb :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 85.14%,  85.14%)
+   long_fromb>5GeV :        4 from        4 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 85.14%,  85.14%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 266 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 2.0, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 14 mins 49.42 seconds.
+Average number of iterations per convergence: 47.3 iterations. 
+
+ID of each event: [266]
+Number of hits by event: [2016] 
+Number of max_neurons by event: [2350] 
+Hopfield networks runtime by event: ['00:14:49'] 
+
+224 tracks including       20 ghosts (  8.9%). Event average   8.9%
+              velo :      167 from      251 ( 66.5%,  66.5%)       15 clones (  8.98%), purity: ( 97.61%,  97.61%),  hitEff: ( 76.77%,  76.77%)
+              long :       61 from       69 ( 88.4%,  88.4%)        7 clones ( 11.48%), purity: ( 97.90%,  97.90%),  hitEff: ( 71.54%,  71.54%)
+         long>5GeV :       47 from       53 ( 88.7%,  88.7%)        5 clones ( 10.64%), purity: ( 98.08%,  98.08%),  hitEff: ( 72.64%,  72.64%)
+      long_strange :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 50.00%,  50.00%)
+ long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 50.00%,  50.00%)
+        long_fromb :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 87.50%,  87.50%)
+   long_fromb>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 87.50%,  87.50%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 64 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 2.04, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 25 mins 29.36 seconds.
+Average number of iterations per convergence: 52.0 iterations. 
+
+ID of each event: [64]
+Number of hits by event: [2263] 
+Number of max_neurons by event: [3540] 
+Hopfield networks runtime by event: ['00:25:29'] 
+
+249 tracks including       15 ghosts (  6.0%). Event average   6.0%
+              velo :      194 from      266 ( 72.9%,  72.9%)       28 clones ( 14.43%), purity: ( 98.44%,  98.44%),  hitEff: ( 73.73%,  73.73%)
+              long :       74 from       80 ( 92.5%,  92.5%)       19 clones ( 25.68%), purity: ( 97.83%,  97.83%),  hitEff: ( 67.09%,  67.09%)
+         long>5GeV :       57 from       59 ( 96.6%,  96.6%)       16 clones ( 28.07%), purity: ( 97.59%,  97.59%),  hitEff: ( 64.65%,  64.65%)
+      long_strange :        3 from        3 (100.0%, 100.0%)        2 clones ( 66.67%), purity: ( 97.78%,  97.78%),  hitEff: ( 42.67%,  42.67%)
+ long_strange>5GeV :        3 from        3 (100.0%, 100.0%)        2 clones ( 66.67%), purity: ( 97.78%,  97.78%),  hitEff: ( 42.67%,  42.67%)
+        long_fromb :        3 from        3 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 65.08%,  65.08%)
+   long_fromb>5GeV :        3 from        3 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 65.08%,  65.08%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 141 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 2.16, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 32 mins 27.51 seconds.
+Average number of iterations per convergence: 49.5 iterations. 
+
+ID of each event: [141]
+Number of hits by event: [2560] 
+Number of max_neurons by event: [5256] 
+Hopfield networks runtime by event: ['00:32:27'] 
+
+258 tracks including       26 ghosts ( 10.1%). Event average  10.1%
+              velo :      187 from      304 ( 61.5%,  61.5%)       23 clones ( 12.30%), purity: ( 97.99%,  97.99%),  hitEff: ( 78.36%,  78.36%)
+              long :       60 from       82 ( 73.2%,  73.2%)       13 clones ( 21.67%), purity: ( 99.30%,  99.30%),  hitEff: ( 74.58%,  74.58%)
+         long>5GeV :       41 from       49 ( 83.7%,  83.7%)       11 clones ( 26.83%), purity: ( 99.38%,  99.37%),  hitEff: ( 70.97%,  70.97%)
+      long_strange :        2 from        4 ( 50.0%,  50.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 77.50%,  77.50%)
+ long_strange>5GeV :        2 from        3 ( 66.7%,  66.7%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 77.50%,  77.50%)
+        long_fromb :        1 from        3 ( 33.3%,  33.3%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 90.91%,  90.91%)
+   long_fromb>5GeV :        0 from        2 (  0.0%,   0.0%)        0 clones (  0.00%), purity: (  0.00%,   0.00%),  hitEff: (  0.00%,   0.00%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 308 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1.92, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 54 mins 39.15 seconds.
+Average number of iterations per convergence: 54.8 iterations. 
+
+ID of each event: [308]
+Number of hits by event: [2854] 
+Number of max_neurons by event: [5475] 
+Hopfield networks runtime by event: ['00:54:39'] 
+
+310 tracks including       37 ghosts ( 11.9%). Event average  11.9%
+              velo :      225 from      331 ( 68.0%,  68.0%)       35 clones ( 15.56%), purity: ( 98.55%,  98.55%),  hitEff: ( 72.42%,  72.42%)
+              long :       99 from      111 ( 89.2%,  89.2%)       22 clones ( 22.22%), purity: ( 98.55%,  98.55%),  hitEff: ( 67.47%,  67.47%)
+         long>5GeV :       71 from       75 ( 94.7%,  94.7%)       18 clones ( 25.35%), purity: ( 98.15%,  98.15%),  hitEff: ( 64.86%,  64.86%)
+      long_strange :        5 from        6 ( 83.3%,  83.3%)        2 clones ( 40.00%), purity: (100.00%, 100.00%),  hitEff: ( 58.63%,  58.63%)
+ long_strange>5GeV :        3 from        3 (100.0%, 100.0%)        2 clones ( 66.67%), purity: (100.00%, 100.00%),  hitEff: ( 46.08%,  46.08%)
+        long_fromb :        7 from        7 (100.0%, 100.0%)        2 clones ( 28.57%), purity: (100.00%, 100.00%),  hitEff: ( 61.81%,  61.81%)
+   long_fromb>5GeV :        6 from        6 (100.0%, 100.0%)        2 clones ( 33.33%), purity: (100.00%, 100.00%),  hitEff: ( 60.16%,  60.16%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 50 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 2.0, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 79 mins 30.20 seconds.
+Average number of iterations per convergence: 61.6 iterations. 
+
+ID of each event: [50]
+Number of hits by event: [3265] 
+Number of max_neurons by event: [6059] 
+Hopfield networks runtime by event: ['01:19:30'] 
+
+376 tracks including       47 ghosts ( 12.5%). Event average  12.5%
+              velo :      272 from      428 ( 63.6%,  63.6%)       36 clones ( 13.24%), purity: ( 98.60%,  98.60%),  hitEff: ( 74.06%,  74.06%)
+              long :       90 from      107 ( 84.1%,  84.1%)       27 clones ( 30.00%), purity: ( 98.68%,  98.68%),  hitEff: ( 64.98%,  64.98%)
+         long>5GeV :       65 from       77 ( 84.4%,  84.4%)       20 clones ( 30.77%), purity: ( 98.81%,  98.81%),  hitEff: ( 63.70%,  63.70%)
+      long_strange :        6 from        9 ( 66.7%,  66.7%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 69.68%,  69.68%)
+ long_strange>5GeV :        3 from        4 ( 75.0%,  75.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 57.14%,  57.14%)
+        long_fromb :        2 from        3 ( 66.7%,  66.7%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 94.44%,  94.44%)
+   long_fromb>5GeV :        2 from        3 ( 66.7%,  66.7%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 94.44%,  94.44%)
+____________________
+
+ Experiment Test of the Hopfield network on the bsphiphi dataset with the ORIGINAL BIFURCATION 
+
+Upgraded network - Run on EVENT 453 of the bsphiphi dataset deciles with the ORIGINAL BIFURCATION 
+Number of events: 1
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 2.32, 'T_decay': <function <lambda> at 0x7f6bf5729700>, 'B_decay': <function <lambda> at 0x7f6bf5729790>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.2, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.05}
+Total time to run all the Hopfield Networks: 157 mins 27.75 seconds.
+Average number of iterations per convergence: 67.45 iterations. 
+
+ID of each event: [453]
+Number of hits by event: [3726] 
+Number of max_neurons by event: [9200] 
+Hopfield networks runtime by event: ['02:37:27'] 
+
+419 tracks including       48 ghosts ( 11.5%). Event average  11.5%
+              velo :      288 from      433 ( 66.5%,  66.5%)       42 clones ( 14.58%), purity: ( 97.92%,  97.92%),  hitEff: ( 71.65%,  71.65%)
+              long :      100 from      114 ( 87.7%,  87.7%)       26 clones ( 26.00%), purity: ( 98.51%,  98.51%),  hitEff: ( 63.13%,  63.13%)
+         long>5GeV :       61 from       65 ( 93.8%,  93.8%)       18 clones ( 29.51%), purity: ( 98.49%,  98.49%),  hitEff: ( 60.62%,  60.62%)
+      long_strange :        4 from        4 (100.0%, 100.0%)        2 clones ( 50.00%), purity: ( 95.83%,  95.83%),  hitEff: ( 62.85%,  62.85%)
+ long_strange>5GeV :        3 from        3 (100.0%, 100.0%)        1 clones ( 33.33%), purity: ( 93.75%,  93.75%),  hitEff: ( 70.83%,  70.83%)
+        long_fromb :        2 from        2 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 70.83%,  70.83%)
+   long_fromb>5GeV :        2 from        2 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 70.83%,  70.83%)
+____________________
