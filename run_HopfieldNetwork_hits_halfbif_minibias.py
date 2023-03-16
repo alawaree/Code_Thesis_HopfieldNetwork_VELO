@@ -1010,16 +1010,13 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-samples_dataset_minibias = ["Samples_51_to_663_hits", "Samples_664_to_978_hits",
-                            "Samples_980_to_1255_hits","Samples_1257_to_1549_hits",
-                            "Samples_1550_to_1812_hits","Samples_1819_to_2119_hits",
-                            "Samples_2121_to_2464_hits","Samples_2468_to_2853_hits"]
+samples_dataset = ["Samples_2854_to_3405_hits", "Samples_3412_to_6786_hits"]
 
-for index, sample in enumerate(samples_dataset_minibias):
+for index, sample in enumerate(samples_dataset):
     save_experiment(
         "results_minibias_samples_hits_halfbif",
-        f"Test of the Hopfield network on the {index+1}th sample minibias dataset with half bifurcation fct",
-        f"Upgraded network - Best Configuration test on 10 events from the {index+1}th sample of minibias dataset ({sample}) with half bifurcation fct",
+        f"Test of the Hopfield network on the {index+9}th sample minibias dataset with half bifurcation fct",
+        f"Upgraded network - Best Configuration test on 10 events from the {index+9}th sample of minibias dataset ({sample}) with half bifurcation fct",
         parameters,
         f"/datasets/samples/minibias_samples_hits/{sample}/velo_event_",
         10,

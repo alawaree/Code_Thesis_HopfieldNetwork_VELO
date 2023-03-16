@@ -1010,16 +1010,13 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-samples_dataset = ["Samples_336_to_1118_hits", "Samples_1130_to_1450_hits",
-                            "Samples_1451_to_1739_hits","Samples_1740_to_2004_hits",
-                            "Samples_2015_to_2257_hits", "Samples_2258_to_2552_hits",
-                            "Samples_2553_to_2851_hits", "Samples_2852_to_3258_hits"]
+samples_dataset = ["Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"]
 
 for index, sample in enumerate(samples_dataset):
     save_experiment(
         "results_bsphiphi_samples_hits_halfbif",
-        f"Test of the Hopfield network on the {index+1}th sample bsphiphi dataset with half bifurcation fct",
-        f"Upgraded network - Best Configuration test on 10 events from the {index+1}th sample of bsphiphi dataset ({sample}) with half bifurcation fct",
+        f"Test of the Hopfield network on the {index+9}th sample bsphiphi dataset with half bifurcation fct",
+        f"Upgraded network - Best Configuration test on 10 events from the {index+9}th sample of bsphiphi dataset ({sample}) with half bifurcation fct",
         parameters,
         f"/datasets/samples/bsphiphi_samples_hits/{sample}/velo_event_",
         10,
