@@ -886,42 +886,6 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
 
 
 if __name__ == "__main__":
-    
-#################### PARAMETERS #######################
-    parameters = {
-        ### NEURONS ###
-        "random_neuron_init": True,
-        "binary_states": False,  # try it out once maybe but scrap it
-        ### WEIGHTS ###
-        "ALPHA": 1,
-        "BETA": 10,
-        "GAMMA": 10,
-        "narrowness": 200,
-        "constant_factor": 0.9,
-        "monotone_constant_factor": 0.9,
-        #### UPDATE ###
-        "T": 1e-8,  # try to experiment with these rather
-        "B": 1e-6,  # try to experiment with these rather
-        "T_decay": lambda t: max(1e-8, t * 0.01),  # try to remove these
-        "B_decay": lambda t: max(1e-4, t * 0.04),  # try to remove these
-        "decay_off": False,  # using this
-        "randomized_updates": True,
-        "fully_randomized_updates": False,
-        #### THRESHOLD ###
-        "maxActivation": True,
-        "THRESHOLD": 0.2,
-        ##### CONVERGENCE ###
-        "convergence_threshold": 0.00000005,
-        "bootstrap_iters": 10,
-        "bootstrap_method": "below_mean",
-        ###### BIFURC REMOVAL #####
-        "smart": True,
-        "only_weight": False,
-        "max_activation": False,
-        ###### Track prunning #######
-        # here we could set the threshold
-        "pruning_tr": 0.01,
-    }
 
 #################### RUN THE NETWORK ON HITS #######################
 
@@ -940,14 +904,14 @@ if __name__ == "__main__":
 #7,8: "Samples_2553_to_2851_hits", "Samples_2852_to_3258_hits"
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
-samples_dataset = [ "Samples_51_to_663_hits", "Samples_664_to_978_hits",
+    samples_dataset = [ "Samples_51_to_663_hits", "Samples_664_to_978_hits",
                     "Samples_980_to_1255_hits","Samples_1257_to_1549_hits",
                     "Samples_1550_to_1812_hits","Samples_1819_to_2119_hits",
                     "Samples_2121_to_2464_hits","Samples_2468_to_2853_hits",
                     "Samples_2854_to_3405_hits","Samples_3412_to_6786_hits"]
 
-THRESHOLD_values = np.linspace(0.01, 0.1, 10).round(2).tolist()
-pruning_tr_values =  np.linspace(0.01, 0.1, 10).round(2).tolist()
+    THRESHOLD_values = np.linspace(0.01, 0.1, 10).round(2).tolist()
+    pruning_tr_values =  np.linspace(0.01, 0.1, 10).round(2).tolist()
 
 for index, sample in enumerate(samples_dataset):
     for pruning_tr_value in pruning_tr_values:
@@ -990,5 +954,6 @@ for index, sample in enumerate(samples_dataset):
             "results_minibias_samples_hits_tuning_parameters",
             f"Test of the Hopfield network on the {index+1}th sample minibias dataset with pruning_tr={pruning_tr_value} and thres={tr_value}",
             f"Upgraded network - Configuration test on 10 events from the {index+1}th sample of minibias dataset ({sample}) with \n halfbif,\n pruning_tr={pruning_tr_value}, \n thres={tr_value}",
-            f"/datasets/samples/minibias_samples_hits/{sample}/velo_event_",
-            10)
+            f"/datasets/samples/minibias_samples_hits/{sample}/velo_event_" , 
+            10
+            )
