@@ -1,5 +1,5 @@
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.01
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.01
 Number of events: 10
@@ -20,7 +20,7 @@ Hopfield networks runtime by event: ['00:21:42', '00:25:05', '00:20:09', '00:23:
  long_strange>5GeV :       21 from       25 ( 84.0%,  91.2%)        3 clones ( 14.29%), purity: ( 98.26%,  96.85%),  hitEff: ( 80.06%,  73.54%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.02
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.02
 Number of events: 10
@@ -41,7 +41,7 @@ Hopfield networks runtime by event: ['00:21:14', '00:25:11', '00:19:30', '00:24:
  long_strange>5GeV :       21 from       25 ( 84.0%,  90.6%)        4 clones ( 19.05%), purity: ( 99.16%,  98.69%),  hitEff: ( 78.75%,  72.91%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.03
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.03
 Number of events: 10
@@ -62,7 +62,7 @@ Hopfield networks runtime by event: ['00:21:39', '00:24:30', '00:21:21', '00:24:
  long_strange>5GeV :       21 from       25 ( 84.0%,  89.3%)        7 clones ( 33.33%), purity: ( 97.10%,  97.07%),  hitEff: ( 78.21%,  68.22%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.04
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.04
 Number of events: 10
@@ -83,7 +83,7 @@ Hopfield networks runtime by event: ['00:22:01', '00:24:58', '00:21:21', '00:23:
  long_strange>5GeV :       22 from       25 ( 88.0%,  88.9%)        3 clones ( 13.64%), purity: ( 96.96%,  95.31%),  hitEff: ( 81.82%,  73.12%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.05
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.05
 Number of events: 10
@@ -104,7 +104,7 @@ Hopfield networks runtime by event: ['00:22:12', '00:25:38', '00:20:52', '00:24:
  long_strange>5GeV :       22 from       25 ( 88.0%,  91.0%)        7 clones ( 31.82%), purity: ( 98.62%,  97.71%),  hitEff: ( 76.49%,  66.04%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.06
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.06
 Number of events: 10
@@ -125,7 +125,7 @@ Hopfield networks runtime by event: ['00:22:00', '00:25:03', '00:20:34', '00:24:
  long_strange>5GeV :       22 from       25 ( 88.0%,  91.0%)        5 clones ( 22.73%), purity: ( 98.19%,  96.43%),  hitEff: ( 79.35%,  72.68%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.07
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.07
 Number of events: 10
@@ -146,7 +146,7 @@ Hopfield networks runtime by event: ['00:22:16', '00:25:10', '00:20:58', '00:22:
  long_strange>5GeV :       22 from       25 ( 88.0%,  91.0%)        5 clones ( 22.73%), purity: ( 97.87%,  96.33%),  hitEff: ( 79.07%,  70.27%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.08
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.08
 Number of events: 10
@@ -167,7 +167,7 @@ Hopfield networks runtime by event: ['00:22:54', '00:26:03', '00:21:11', '00:24:
  long_strange>5GeV :       19 from       25 ( 76.0%,  73.4%)        7 clones ( 36.84%), purity: ( 98.21%,  96.94%),  hitEff: ( 69.33%,  64.02%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.09
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.09
 Number of events: 10
@@ -188,7 +188,7 @@ Hopfield networks runtime by event: ['00:22:11', '00:26:07', '00:20:34', '00:24:
  long_strange>5GeV :       21 from       25 ( 84.0%,  86.0%)        7 clones ( 33.33%), purity: ( 97.98%,  97.39%),  hitEff: ( 70.03%,  65.67%)
 ____________________
 
- Experiment Test of the Hopfield network on the 5th sample minibias dataset
+ Experiment Test of the Hopfield network on the 7th sample minibias dataset with pruning_tr = 0.10
 
 Upgraded network - Best Configuration test on 10 events from the 7th sample of minibias dataset Samples_2121_to_2464_hits with 0.1
 Number of events: 10
