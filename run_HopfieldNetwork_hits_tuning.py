@@ -954,6 +954,7 @@ for index, sample in enumerate(samples_dataset):
             "results_minibias_samples_hits_tuning_parameters",
             f"Test of the Hopfield network on the {index+1}th sample minibias dataset with pruning_tr={pruning_tr_value} and thres={tr_value}",
             f"Upgraded network - Configuration test on 10 events from the {index+1}th sample of minibias dataset ({sample}) with \n halfbif,\n pruning_tr={pruning_tr_value}, \n thres={tr_value}",
+            parameters,
             f"/datasets/samples/minibias_samples_hits/{sample}/velo_event_" , 
             10
             )
