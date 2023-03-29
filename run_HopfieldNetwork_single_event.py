@@ -147,13 +147,11 @@ class Hopfield:
                 for i in range(self.hit_counts[w_idx]):  # m1
                     ln_idx = i * self.hit_counts[w_idx + 1] + con_idx  # left_neuron_idx
                     for j in range(self.hit_counts[w_idx + 2]):  # m3
-                        rn_idx = (
-                            con_idx * self.hit_counts[w_idx + 2] + j
-                        )  # right_neuron_idx
+                        rn_idx = (con_idx * self.hit_counts[w_idx + 2] + j)  # right_neuron_idx
 
                         # Constant term from the other group
                         constant = (
-                            self.N_info[w_idx, ln_idx, 2]
+                            self.N_info[w_idx, ln_idx, 2] # using norm distance
                             - self.N_info[w_idx + 1, rn_idx, 2]
                         )
                         constant = tanh(constant) * (
@@ -169,7 +167,7 @@ class Hopfield:
                         )
 
                         # monotone constant
-                        monotone_constant = (
+                        monotone_constant = ( #using monotone distance
                             self.N_info[w_idx, ln_idx, 3]
                             - self.N_info[w_idx + 1, rn_idx, 3]
                         )
@@ -243,6 +241,7 @@ class Hopfield:
         c1 = self.hit_counts[idx]
         c2 = self.hit_counts[idx + 1]
         update = 0
+
         if idx > 0:
             update += self.N[idx - 1, :].T @ self.W[idx - 1, :, i]
         if idx < self.modules_count - 2:
@@ -254,13 +253,12 @@ class Hopfield:
         rm_id = i % c2
         # there can be a lot improved runtime wise with storing the sums and adj
         # but too complicated for now
+
         # all segments mapping to the hit in m1 -> the left module
         m1h = np.sum(self.N[idx, lm_id * c2 : (lm_id + 1) * c2])
         # all segments mapping to the hit in m2 - the right module
-        m2h = np.sum(
-            self.N[idx, : c1 * c2].reshape(c2, c1)[rm_id, :]
-        )  # correct as well...
-        # we need to subtract the neuron of the segment 2 times because we add it 2 times
+        m2h = np.sum(self.N[idx, : c1 * c2].reshape(c2, c1)[rm_id, :])  # correct as well...
+
         pen = m1h + m2h - 2 * self.N[idx, i]
         _update = 0.5 * (1 + tanh(update / t - b * pen / t))
 
@@ -278,20 +276,22 @@ class Hopfield:
 
         E = 0
         bifurc_pen = 0
+
         for idx in range(self.modules_count - 2):
             c1 = self.hit_counts[idx]
             c2 = self.hit_counts[idx + 1]
             c3 = self.hit_counts[idx + 2]
 
-            # XXX: just realised we are counting most penalties too often!! -> fixed
             f1 = 0.5
             f2 = 0.5
             if idx == 0:
                 f1 = 1
             if idx == self.modules_count - 3:
                 f2 = 1
+
             N1_pen = self.N[idx, : c1 * c2].reshape(c2, c1)
             N2_pen = self.N[idx + 1, : c2 * c3].reshape(c2, c3)
+
             bifurc_pen = (
                 np.sum(np.trace(N1_pen @ N1_pen.T)) * f1
                 + np.sum(np.trace(N2_pen @ N2_pen.T)) * f2
@@ -339,7 +339,7 @@ class Hopfield:
         pbar.close()
         return self.N, self.energies[-1], t
 
-    def bootstrap_converge(self, bootstraps=50, method="mean"):
+    def bootstrap_converge(self, bootstraps=50, method="below_mean"):
         start_time = time.time()
         states_list = []
         energy_list = []
@@ -381,9 +381,12 @@ class Hopfield:
                     _tmp_states.append(states)
             _tmp_states = np.stack(_tmp_states, axis=2)
             self.N = np.mean(_tmp_states, axis=2)
+
         else:
             stacked_states = np.stack(states_list, axis=2)
             self.N = np.mean(stacked_states, axis=2)
+
+
 
         end_time = time.time() - start_time
         print(
