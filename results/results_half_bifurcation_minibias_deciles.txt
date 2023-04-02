@@ -1,5 +1,5 @@
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 1
 
 Upgraded network - Run on EVENT 888 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -18,7 +18,7 @@ Hopfield networks runtime by event: ['00:00:00']
          long>5GeV :        2 from        2 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 91.67%,  91.67%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 2
 
 Upgraded network - Run on EVENT 27 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -37,7 +37,7 @@ Hopfield networks runtime by event: ['00:01:44']
          long>5GeV :       19 from       19 (100.0%, 100.0%)        2 clones ( 10.53%), purity: ( 96.47%,  96.47%),  hitEff: ( 82.64%,  82.64%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 3
 
 Upgraded network - Run on EVENT 756 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -58,7 +58,7 @@ Hopfield networks runtime by event: ['00:02:35']
  long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 71.43%,  71.43%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 4
 
 Upgraded network - Run on EVENT 18 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -79,7 +79,7 @@ Hopfield networks runtime by event: ['00:04:00']
  long_strange>5GeV :        2 from        2 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 87.50%,  87.50%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 5
 
 Upgraded network - Run on EVENT 411 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -100,7 +100,7 @@ Hopfield networks runtime by event: ['00:07:28']
  long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 6
 
 Upgraded network - Run on EVENT 390 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -121,7 +121,7 @@ Hopfield networks runtime by event: ['00:12:33']
  long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 87.50%,  87.50%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 7
 
 Upgraded network - Run on EVENT 266 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -142,7 +142,7 @@ Hopfield networks runtime by event: ['00:25:22']
  long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: ( 75.00%,  75.00%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 8
 
 Upgraded network - Run on EVENT 696 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -163,7 +163,7 @@ Hopfield networks runtime by event: ['00:33:46']
  long_strange>5GeV :        1 from        1 (100.0%, 100.0%)        0 clones (  0.00%), purity: ( 83.33%,  83.33%),  hitEff: ( 83.33%,  83.33%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 9
 
 Upgraded network - Run on EVENT 560 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
@@ -184,7 +184,7 @@ Hopfield networks runtime by event: ['00:52:40']
  long_strange>5GeV :        2 from        3 ( 66.7%,  66.7%)        0 clones (  0.00%), purity: (100.00%, 100.00%),  hitEff: (100.00%, 100.00%)
 ____________________
 
- Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION 
+ Experiment Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, decile event 10
 
 Upgraded network - Run on EVENT 885 of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION
 Number of events: 1
