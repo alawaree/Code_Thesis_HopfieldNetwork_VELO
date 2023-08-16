@@ -21684,3 +21684,18 @@ Upgraded network - Configuration test on 10 events from the 9th sample of minibi
  thres=0.1
 Number of events: 10
 Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7f5f3e327430>, 'B_decay': <function <lambda> at 0x7f5f3e3274c0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.1, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.1}
+Total time to run all the Hopfield Networks: 752 mins 26.81 seconds.
+Average number of iterations per convergence: 59.400000000000006 iterations. 
+
+ID of each event: [504, 869, 326, 797, 836, 727, 594, 753, 280, 607]
+Number of hits by event: [3304, 3008, 3350, 2957, 2940, 3375, 2879, 2992, 3157, 2951] 
+Number of max_neurons by event: [7656, 5402, 7917, 6806, 5100, 8366, 6776, 5293, 7138, 6560] 
+Hopfield networks runtime by event: ['01:38:53', '01:04:42', '01:27:36', '01:03:39', '01:01:15', '01:46:25', '01:01:44', '00:53:41', '01:27:05', '01:07:21'] 
+
+3848 tracks including      640 ghosts ( 16.6%). Event average  16.6%
+              velo :     2584 from     3791 ( 68.2%,  69.3%)      338 clones ( 13.08%), purity: ( 96.66%,  96.65%),  hitEff: ( 73.85%,  73.80%)
+              long :      937 from     1070 ( 87.6%,  88.5%)      216 clones ( 23.05%), purity: ( 96.91%,  96.92%),  hitEff: ( 67.11%,  67.01%)
+         long>5GeV :      623 from      685 ( 90.9%,  91.3%)      149 clones ( 23.92%), purity: ( 96.73%,  96.73%),  hitEff: ( 66.73%,  66.56%)
+      long_strange :       36 from       51 ( 70.6%,  72.7%)        7 clones ( 19.44%), purity: ( 96.33%,  96.86%),  hitEff: ( 74.25%,  68.30%)
+ long_strange>5GeV :       21 from       27 ( 77.8%,  76.6%)        0 clones (  0.00%), purity: ( 95.27%,  95.41%),  hitEff: ( 79.48%,  75.33%)
+____________________
