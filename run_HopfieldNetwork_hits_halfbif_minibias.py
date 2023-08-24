@@ -392,64 +392,6 @@ class Hopfield:
         )
         return sum(iter_list) / len(iter_list)
 
-    def tracks(self):
-        # What the papers say:  The answer is given by the final set of active Neurons
-        #                       All sets of Neurons connected together are considered as track candidates
-        #
-        # IDEA: All neurons that share a hit and are both connected are track candidates
-        global_candidates = []
-        global_candidate_states = []
-
-        for idx in range(self.modules_count - 2):
-            candidates = []
-            candidate_states = []
-            l1 = self.hit_counts[idx]  # number of hits in module 1
-            l2 = self.hit_counts[idx + 1]
-            l3 = self.hit_counts[idx + 2]
-
-            if self.p["maxActivation"]:
-                candidates = []
-                thresh = self.p["THRESHOLD"]
-
-                n1_transform = self.N[idx, : l2 * l1].reshape(l1, l2).T.copy()
-                n2_transform = self.N[idx + 1, : l3 * l2].reshape(l2, l3).T.copy()
-
-                for con in range(l2):  # loop over the connection hits in module 2
-                    # XXX i try swapping these....
-                    h1_idx = np.argmax(n1_transform[con, :])
-                    h3_idx = np.argmax(n2_transform[:, con])
-
-                    if (
-                        n1_transform[con, h1_idx] < thresh
-                        or n2_transform[h3_idx, con] < thresh
-                    ):
-                        continue
-
-                    hit1 = self.m[idx].hits()[h1_idx]
-                    hit2 = self.m[idx + 1].hits()[con]
-                    hit3 = self.m[idx + 2].hits()[h3_idx]
-                    candidates.append(em.track([hit1, hit2, hit3]))
-                    self.extracted_hits.add(hit1)
-                    self.extracted_hits.add(hit2)
-                    self.extracted_hits.add(hit3)
-                    # if we get the same state
-                    candidate_states.append(n1_transform[con, h1_idx])
-                    candidate_states.append(n2_transform[h3_idx, con])
-
-                    # XXX
-                    # this prevents the display of bifurcation?!
-                    # n1_transform[
-                    #    :, h1_idx
-                    # ] = 0  # set this hit to 0 so it's not chosen again
-                    # n2_transform[h3_idx, :] = 0
-
-            global_candidates += candidates
-            global_candidate_states += candidate_states
-
-        self.extracted_tracks = global_candidates
-        self.extracted_track_states = global_candidate_states
-
-        return global_candidates
 
     def full_tracks(self):
         # this will deal with stange angles!!!
@@ -640,129 +582,6 @@ class Hopfield:
                     if smart:
                         max_activation = False
 
-                # right-left bifurcation
-                #activation_mask = self.N[idx, : c1 * c2].reshape(c1, c2)[l_hit, :] > tr
-                #if sum(activation_mask) > 1:
-                #    affected_neurons = []
-                 #   affected_neurons_2 = []
-                  #  for i in range(c2):
-                   #     if activation_mask[i]:
-                    #        if zero:
-                     #           self.N[idx, (l_hit * c2) + i] = 0
-                      #      else:
-                       #         affected_neurons = affected_neurons + [(l_hit * c2) + i]
-                    #if smart:  # i know there can be only one neuron on the right.
-                    #    if idx > 0:
-                            # can check here only for the first active neuron, because we removed
-                            # the other bifurcation in the previous iteration
-                    #        c0 = self.hit_counts[idx - 1]
-                     #       activation_mask_2 = (
-                      #          self.N[idx - 1, : c0 * c1].reshape(c0, c1)[:, l_hit]
-                       #         > tr
-                        #    )
-                         #   if sum(activation_mask_2) > 0:
-                          #      for i in range(
-                           #         c0  # this was c0...
-                            #    ):  # loop over all nerons affected by bifurc
-                             #       if activation_mask_2[i]:
-                              #          affected_neurons_2 = affected_neurons_2 + [
-                               #             c1 * i + l_hit
-                                #        ]
-
-                                #if len(affected_neurons_2) > 0:
-                                 #   max_val = 0
-                                  #  max_l = None
-                                   # max_r = None
-                                    #for e in affected_neurons_2:
-                                     #   for j in affected_neurons:
-                                      #      c = (
-                                       #         self.N[idx - 1, e]
-                                        #        * self.W[idx - 1, e, j]
-                                         #       * self.N[idx, j]
-                                          #  )
-                                           # if self.p["only_weight"]:
-                                            #    c = self.W[idx - 1, e, j]
-                                            #if c > max_val:
-                                             #   max_l = e
-                                              #  max_r = j
-                                               # max_val = c
-                            #            self.N[idx - 1, e] = 0
-                             #   for e in affected_neurons:
-                              #      self.N[idx, j] = 0
-                               # if max_r is not None and max_l is not None:
-                                #    self.N[idx - 1, max_l] = 1
-                              #      self.N[idx, max_r] = 1
-                            #else:
-                             #   max_activation = True
-                       # else:
-                        #    max_activation = True
-                        #pass
-
-                    #if max_activation:
-                        # check to the left or max score
-                     #   max_activation = self.N[idx, affected_neurons[0]]
-                      #  max_id = affected_neurons[0]
-                       # for e in affected_neurons:
-                        #    if self.N[idx, e] >= max_activation:
-                         #       max_id = e
-                          #      max_activation = self.N[idx, e]
-                           # self.N[idx, e] = 0
-                       # self.N[idx, max_id] = 1
-
-        # converged, averaged neuron state
-        # what do we want to do -> search all neurons wether there is bifurcation
-        # how to search this, by the indices... and then we store it as a combination of hit id_s, and which side of this element the bifurcation occurs
-        # bifiurcation is stored as a list of hit ids, with
-
-    def show_all_tracks(self, threshold=None, show_states=False):
-        # Creates a colormap from blue to red for small to large values respectively
-        c_map = Colormap(0, 1, 2 / 3.0, 0)
-        c = []
-        tracks = []
-        for idx in range(self.modules_count - 1):
-            m1 = self.m[idx]
-            m2 = self.m[idx + 1]
-
-            for i, hit1 in enumerate(m1.hits()):
-                for j, hit2 in enumerate(m2.hits()):
-                    n_idx = i * self.hit_counts[idx + 1] + j
-                    if threshold:
-                        if self.N[idx, n_idx] >= threshold:
-                            tracks.append(em.track([hit1, hit2]))
-                            if show_states:
-                                c.append(c_map.get_color_rgb(self.N[idx, n_idx]))
-                        continue
-                    if show_states:
-                        c.append(c_map.get_color_rgb(self.N[idx, n_idx]))
-                    tracks.append(em.track([hit1, hit2]))
-        eg.plot_tracks_and_modules(tracks, self.m, colors=c)
-
-    def tracks_with_hit(self, hit):
-        return [track for track in self.extracted_tracks if hit in track.hits]
-
-    def print_neurons(self):
-        n = len(self.N)
-        for i in range(n):
-            m = int(sqrt(len(self.N[i])))
-            for j in range(m):
-                print(f"m{i+1}h{j+1}: {self.N[i, (j*m):((j+1)*m)]}")
-
-    def plot_network_results(self, show_states=False):
-        if show_states:
-            # Creates a colormap from blue to red for small to large values respectively
-            c_map = Colormap(0, 1, 2 / 3.0, 0)
-            colors = []
-            [colors.append(c_map.get_color_rgb(v)) for v in self.extracted_track_states]
-            eg.plot_tracks_and_modules(
-                self.extracted_tracks,
-                self.m,
-                colors=colors,
-                title="Hopfield Output with states",
-            )
-        else:
-            eg.plot_tracks_and_modules(
-                self.extracted_tracks, self.m, title="Hopfield Output"
-            )
 
 # LOADING EVENTS
 def load_event(file_name, plot_event=False):
@@ -1010,11 +829,11 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-samples_dataset = ["Samples_2854_to_3405_hits", "Samples_3412_to_6786_hits"]
+samples_dataset = ["Samples_51_to_663_hits", "Samples_664_to_978_hits"]
 
 for index, sample in enumerate(samples_dataset):
     save_experiment(
-        "results_minibias_samples_hits_halfbif",
+        "test_test_test",
         f"Test of the Hopfield network on the {index+9}th sample minibias dataset with half bifurcation fct",
         f"Upgraded network - Best Configuration test on 10 events from the {index+9}th sample of minibias dataset ({sample}) with half bifurcation fct",
         parameters,

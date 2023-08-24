@@ -308,19 +308,22 @@ class Hopfield:
     def converge(self):
         # Basically keep updating until the difference in Energy between timesteps is lower than 0.0005 (Based on Stimfple-Abele)
         # Passaleva uses a different kind of convergence i think (4)
-        self.energies = [self.energy()]  # store all energies (not fastest but maybe nice for visualisations)
+        self.energies = [
+            self.energy()
+        ]  # store all energies (not fastest but maybe nice for visualisations)
         t = 0  # timesteps
         self.p["T"] = self.start_T
         # self.p["B"] = self.start_B
         # print(f"N at iteration{t}:", np.round(my_instance.N, 1))
-
-
         self.update()
         t += 1
         self.energies.append(self.energy())
         
-        pbar = tqdm(total=100)
-        while (abs(abs(self.energies[-2]) - abs(self.energies[-1])) >= self.p["convergence_threshold"]):
+        pbar = tqdm(total=55)
+        while (
+            abs(abs(self.energies[-2]) - abs(self.energies[-1]))
+            >= self.p["convergence_threshold"]
+        ):
             self.update()
             self.energies.append(self.energy())
             # print(f"N at iteration{t}:", np.round(my_instance.N, 1))
@@ -637,8 +640,6 @@ class Hopfield:
                     if smart:
                         max_activation = False
 
-                
-
         # converged, averaged neuron state
         # what do we want to do -> search all neurons wether there is bifurcation
         # how to search this, by the indices... and then we store it as a combination of hit id_s, and which side of this element the bifurcation occurs
@@ -719,7 +720,7 @@ def load_event(file_name, plot_event=False):
     return json_data_event, (modules_even, modules_odd)
 
 # EVALUATION OF THE EVENT TRACKS
-def evaluate_events(file_name, parameters, id_event, nr_events=1, plot_event=False, output_file=None):
+def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output_file=None):
 
     json_data_all_events = []
     all_tracks = []
@@ -733,10 +734,10 @@ def evaluate_events(file_name, parameters, id_event, nr_events=1, plot_event=Fal
     start_time_networks = time.time() 
 
     all_events = [i for i in range(1000)]
-    #random.seed(40)
-    #random.shuffle(all_events)
+    random.seed(40)
+    random.shuffle(all_events)
     count = 0
-    j = id_event
+    j = 0
     
     while count < nr_events:
         i = all_events[j]
@@ -865,7 +866,7 @@ def mse(network, tracks):
     return ((network.N - true_network.N) ** 2).mean(axis=None)
 
 # SAVE EXPERIMENT 
-def save_experiment(exp_name, exp_num, desc, p, event_file_name, id_event, nr_events):
+def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
 
     f = open(project_root + "/results/" + exp_name + ".txt", "a")
     f.write(
@@ -876,7 +877,6 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, id_event, nr_ev
     evaluate_events(
         project_root + event_file_name,
         p,
-        id_event,
         nr_events,
         False,
         project_root + "/results/" + exp_name + ".txt",
@@ -886,42 +886,6 @@ def save_experiment(exp_name, exp_num, desc, p, event_file_name, id_event, nr_ev
 
 
 if __name__ == "__main__":
-    
-#################### PARAMETERS #######################
-    parameters = {
-        ### NEURONS ###
-        "random_neuron_init": True,
-        "binary_states": False,  # try it out once maybe but scrap it
-        ### WEIGHTS ###
-        "ALPHA": 1,
-        "BETA": 10,
-        "GAMMA": 10,
-        "narrowness": 200,
-        "constant_factor": 0.9,
-        "monotone_constant_factor": 0.9,
-        #### UPDATE ###
-        "T": 1e-8,  # try to experiment with these rather
-        "B": 1e-6,  # try to experiment with these rather
-        "T_decay": lambda t: max(1e-8, t * 0.01),  # try to remove these
-        "B_decay": lambda t: max(1e-4, t * 0.04),  # try to remove these
-        "decay_off": False,  # using this
-        "randomized_updates": True,
-        "fully_randomized_updates": False,
-        #### THRESHOLD ###
-        "maxActivation": True,
-        "THRESHOLD": 0.2,
-        ##### CONVERGENCE ###
-        "convergence_threshold": 0.00000005,
-        "bootstrap_iters": 10,
-        "bootstrap_method": "minimum",
-        ###### BIFURC REMOVAL #####
-        "smart": True,
-        "only_weight": False,
-        "max_activation": False,
-        ###### Track prunning #######
-        # here we could set the threshold
-        "pruning_tr": 0.05,
-    }
 
 #################### RUN THE NETWORK ON HITS #######################
 
@@ -940,20 +904,53 @@ if __name__ == "__main__":
 #7,8: "Samples_2553_to_2851_hits", "Samples_2852_to_3258_hits"
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
+    samples_dataset = ["Samples_51_to_663_hits"]
 
-#samples_dataset_minibias = ["Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"]
+    THRESHOLD_values = np.linspace(0.01, 0.1, 10).round(2).tolist()
+    pruning_tr_values =  np.linspace(0.01, 0.1, 10).round(2).tolist()
 
-#for index, sample in enumerate(samples_dataset_minibias):
-decile_subset_bsphiphi =  [51, 710, 180, 250, 266, 64, 141, 308, 50, 453]
-decile_subset_minibias = [888, 27, 756, 18, 411, 390, 266, 696, 560, 885]
+for index, sample in enumerate(samples_dataset):
+    for pruning_tr_value in pruning_tr_values:
+        for tr_value in THRESHOLD_values:
+            
+            parameters = {
+            ### NEURONS ###
+            "random_neuron_init": True,
+            "binary_states": False,  # try it out once maybe but scrap it
+            ### WEIGHTS ###
+            "ALPHA": 1,
+            "BETA": 10,
+            "GAMMA": 10,
+            "narrowness": 200,
+            "constant_factor": 0.9,
+            "monotone_constant_factor": 0.9,
+            #### UPDATE ###
+            "T": 1e-8,  # try to experiment with these rather
+            "B": 1e-6,  # try to experiment with these rather
+            "T_decay": lambda t: max(1e-8, t * 0.01),  # try to remove these
+            "B_decay": lambda t: max(1e-4, t * 0.04),  # try to remove these
+            "decay_off": False,  # using this
+            "randomized_updates": True,
+            "fully_randomized_updates": False,
+            #### THRESHOLD ###
+            "maxActivation": True,
+            "THRESHOLD": tr_value,
+            ##### CONVERGENCE ###
+            "convergence_threshold": 0.00000005,
+            "bootstrap_iters": 10,
+            "bootstrap_method": "below_mean",
+            ###### BIFURC REMOVAL #####
+            "smart": True,
+            "only_weight": False,
+            "max_activation": False,
+            ###### Track prunning #######
+            "pruning_tr": pruning_tr_value}
 
-for i, event in decile_subset_minibias:
-    save_experiment(
-        "results_half_bifurcation_minibias_deciles_minimum_testpypy",
-        f"Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, {i}th sample ",
-        f"Upgraded network - Run on EVENT {event} of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION",
-        parameters,
-        f"/datasets/minibias/velo_event_",
-        event,
-        1,
-    )
+            save_experiment(
+            "results_minibias_samples_hits_tuning_parameters_sample1",
+            f"Test of the Hopfield network on the 1st sample minibias dataset with pruning_tr={pruning_tr_value} and thres={tr_value}",
+            f"Upgraded network - Configuration test on 10 events from the 1st sample of minibias dataset ({sample}) with \n halfbif,\n pruning_tr={pruning_tr_value}, \n thres={tr_value}",
+            parameters,
+            f"/datasets/samples/minibias_samples_hits/{sample}/velo_event_" , 
+            100
+            )

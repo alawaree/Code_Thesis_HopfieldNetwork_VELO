@@ -1,4 +1,4 @@
-
+ 
 ############################### INITIALISATION ##########################################
 # GENERAL LIBRARIES
 import json
@@ -147,47 +147,21 @@ class Hopfield:
                 for i in range(self.hit_counts[w_idx]):  # m1
                     ln_idx = i * self.hit_counts[w_idx + 1] + con_idx  # left_neuron_idx
                     for j in range(self.hit_counts[w_idx + 2]):  # m3
-                        rn_idx = (
-                            con_idx * self.hit_counts[w_idx + 2] + j
-                        )  # right_neuron_idx
+                        rn_idx = (con_idx * self.hit_counts[w_idx + 2] + j)  # right_neuron_idx
 
                         # Constant term from the other group
-                        constant = (
-                            self.N_info[w_idx, ln_idx, 2]
-                            - self.N_info[w_idx + 1, rn_idx, 2]
-                        )
-                        constant = tanh(constant) * (
-                            self.p["narrowness"] + 1
-                        )  # tanh to force between -1 and 1
-                        constant = (
-                            -2 * constant ** 2
-                        ) + 1  # this should be high if both terms are similar and low/penalizing if both are not similar
-                        constant = constant * self.p["constant_factor"]
-                        constant = min(
-                            max(constant, -self.p["constant_factor"]),
-                            self.p["constant_factor"],
-                        )
+                        #constant = (self.N_info[w_idx, ln_idx, 2] - self.N_info[w_idx + 1, rn_idx, 2])
+                        #constant = tanh(constant) * ( self.p["narrowness"] + 1)  # tanh to force between -1 and 1
+                        #constant = (-2 * constant ** 2) + 1  # this should be high if both terms are similar and low/penalizing if both are not similar
+                        #constant = constant * self.p["constant_factor"]
+                        #constant = min(max(constant, -self.p["constant_factor"]), self.p["constant_factor"],)
 
                         # monotone constant
-                        monotone_constant = (
-                            self.N_info[w_idx, ln_idx, 3]
-                            - self.N_info[w_idx + 1, rn_idx, 3]
-                        )
-                        monotone_constant = tanh(monotone_constant) * (
-                            self.p["narrowness"] + 1
-                        )  # tanh to force between -1 and 1
-
-                        monotone_constant = (
-                            -2 * monotone_constant ** 2
-                        ) + 1  # this should be high if both terms are similar and low/penalizing if both are not similar
-
-                        monotone_constant = (
-                            monotone_constant * self.p["monotone_constant_factor"]
-                        )
-                        monotone_constant = min(
-                            max(monotone_constant, -self.p["monotone_constant_factor"]),
-                            self.p["monotone_constant_factor"],
-                        )
+                        #monotone_constant = (self.N_info[w_idx, ln_idx, 3] - self.N_info[w_idx + 1, rn_idx, 3])
+                        #monotone_constant = tanh(monotone_constant) * (self.p["narrowness"] + 1)  # tanh to force between -1 and 1
+                        #monotone_constant = (-2 * monotone_constant ** 2) + 1  # this should be high if both terms are similar and low/penalizing if both are not similar
+                        #monotone_constant = (monotone_constant * self.p["monotone_constant_factor"])
+                        #monotone_constant = min(max(monotone_constant, -self.p["monotone_constant_factor"]), self.p["monotone_constant_factor"],)
 
                         theta = abs(
                             self.N_info[w_idx, ln_idx, 0]
@@ -202,10 +176,10 @@ class Hopfield:
                             alpha
                             * ((1 - sin(theta)) ** beta)
                             * ((1 - sin(phi)) ** gamma)
-                            + monotone_constant
-                            + constant
+                            #+ monotone_constant
+                            #+ constant
                         )
-                        #    + constant # this does not work properly
+                        # this does not work properly
 
                         if not neg_weights:
                             self.W[w_idx, ln_idx, rn_idx] = max(
@@ -243,6 +217,7 @@ class Hopfield:
         c1 = self.hit_counts[idx]
         c2 = self.hit_counts[idx + 1]
         update = 0
+
         if idx > 0:
             update += self.N[idx - 1, :].T @ self.W[idx - 1, :, i]
         if idx < self.modules_count - 2:
@@ -254,13 +229,12 @@ class Hopfield:
         rm_id = i % c2
         # there can be a lot improved runtime wise with storing the sums and adj
         # but too complicated for now
+
         # all segments mapping to the hit in m1 -> the left module
         m1h = np.sum(self.N[idx, lm_id * c2 : (lm_id + 1) * c2])
         # all segments mapping to the hit in m2 - the right module
-        m2h = np.sum(
-            self.N[idx, : c1 * c2].reshape(c2, c1)[rm_id, :]
-        )  # correct as well...
-        # we need to subtract the neuron of the segment 2 times because we add it 2 times
+        m2h = np.sum(self.N[idx, : c1 * c2].reshape(c2, c1)[rm_id, :])  # correct as well...
+
         pen = m1h + m2h - 2 * self.N[idx, i]
         _update = 0.5 * (1 + tanh(update / t - b * pen / t))
 
@@ -278,20 +252,22 @@ class Hopfield:
 
         E = 0
         bifurc_pen = 0
+
         for idx in range(self.modules_count - 2):
             c1 = self.hit_counts[idx]
             c2 = self.hit_counts[idx + 1]
             c3 = self.hit_counts[idx + 2]
 
-            # XXX: just realised we are counting most penalties too often!! -> fixed
             f1 = 0.5
             f2 = 0.5
             if idx == 0:
                 f1 = 1
             if idx == self.modules_count - 3:
                 f2 = 1
+
             N1_pen = self.N[idx, : c1 * c2].reshape(c2, c1)
             N2_pen = self.N[idx + 1, : c2 * c3].reshape(c2, c3)
+
             bifurc_pen = (
                 np.sum(np.trace(N1_pen @ N1_pen.T)) * f1
                 + np.sum(np.trace(N2_pen @ N2_pen.T)) * f2
@@ -308,19 +284,22 @@ class Hopfield:
     def converge(self):
         # Basically keep updating until the difference in Energy between timesteps is lower than 0.0005 (Based on Stimfple-Abele)
         # Passaleva uses a different kind of convergence i think (4)
-        self.energies = [self.energy()]  # store all energies (not fastest but maybe nice for visualisations)
+        self.energies = [
+            self.energy()
+        ]  # store all energies (not fastest but maybe nice for visualisations)
         t = 0  # timesteps
         self.p["T"] = self.start_T
         # self.p["B"] = self.start_B
         # print(f"N at iteration{t}:", np.round(my_instance.N, 1))
-
-
         self.update()
         t += 1
         self.energies.append(self.energy())
         
         pbar = tqdm(total=100)
-        while (abs(abs(self.energies[-2]) - abs(self.energies[-1])) >= self.p["convergence_threshold"]):
+        while (
+            abs(abs(self.energies[-2]) - abs(self.energies[-1]))
+            >= self.p["convergence_threshold"]
+        ):
             self.update()
             self.energies.append(self.energy())
             # print(f"N at iteration{t}:", np.round(my_instance.N, 1))
@@ -336,7 +315,7 @@ class Hopfield:
         pbar.close()
         return self.N, self.energies[-1], t
 
-    def bootstrap_converge(self, bootstraps=50, method="mean"):
+    def bootstrap_converge(self, bootstraps=50, method="below_mean"):
         start_time = time.time()
         states_list = []
         energy_list = []
@@ -378,9 +357,12 @@ class Hopfield:
                     _tmp_states.append(states)
             _tmp_states = np.stack(_tmp_states, axis=2)
             self.N = np.mean(_tmp_states, axis=2)
+
         else:
             stacked_states = np.stack(states_list, axis=2)
             self.N = np.mean(stacked_states, axis=2)
+
+
 
         end_time = time.time() - start_time
         print(
@@ -637,7 +619,74 @@ class Hopfield:
                     if smart:
                         max_activation = False
 
-                
+                # right-left bifurcation
+                activation_mask = self.N[idx, : c1 * c2].reshape(c1, c2)[l_hit, :] > tr
+                if sum(activation_mask) > 1:
+                    affected_neurons = []
+                    affected_neurons_2 = []
+                    for i in range(c2):
+                        if activation_mask[i]:
+                            if zero:
+                                self.N[idx, (l_hit * c2) + i] = 0
+                            else:
+                                affected_neurons = affected_neurons + [(l_hit * c2) + i]
+                    if smart:  # i know there can be only one neuron on the right.
+                        if idx > 0:
+                            # can check here only for the first active neuron, because we removed
+                            # the other bifurcation in the previous iteration
+                            c0 = self.hit_counts[idx - 1]
+                            activation_mask_2 = (
+                                self.N[idx - 1, : c0 * c1].reshape(c0, c1)[:, l_hit]
+                                > tr
+                            )
+                            if sum(activation_mask_2) > 0:
+                                for i in range(
+                                    c0  # this was c0...
+                                ):  # loop over all nerons affected by bifurc
+                                    if activation_mask_2[i]:
+                                        affected_neurons_2 = affected_neurons_2 + [
+                                            c1 * i + l_hit
+                                        ]
+
+                                if len(affected_neurons_2) > 0:
+                                    max_val = 0
+                                    max_l = None
+                                    max_r = None
+                                    for e in affected_neurons_2:
+                                        for j in affected_neurons:
+                                            c = (
+                                                self.N[idx - 1, e]
+                                                * self.W[idx - 1, e, j]
+                                                * self.N[idx, j]
+                                            )
+                                            if self.p["only_weight"]:
+                                                c = self.W[idx - 1, e, j]
+                                            if c > max_val:
+                                                max_l = e
+                                                max_r = j
+                                                max_val = c
+                                        self.N[idx - 1, e] = 0
+                                for e in affected_neurons:
+                                    self.N[idx, j] = 0
+                                if max_r is not None and max_l is not None:
+                                    self.N[idx - 1, max_l] = 1
+                                    self.N[idx, max_r] = 1
+                            else:
+                                max_activation = True
+                        else:
+                            max_activation = True
+                        pass
+
+                    if max_activation:
+                        # check to the left or max score
+                        max_activation = self.N[idx, affected_neurons[0]]
+                        max_id = affected_neurons[0]
+                        for e in affected_neurons:
+                            if self.N[idx, e] >= max_activation:
+                                max_id = e
+                                max_activation = self.N[idx, e]
+                            self.N[idx, e] = 0
+                        self.N[idx, max_id] = 1
 
         # converged, averaged neuron state
         # what do we want to do -> search all neurons wether there is bifurcation
@@ -913,7 +962,7 @@ if __name__ == "__main__":
         ##### CONVERGENCE ###
         "convergence_threshold": 0.00000005,
         "bootstrap_iters": 10,
-        "bootstrap_method": "minimum",
+        "bootstrap_method": "below_mean",
         ###### BIFURC REMOVAL #####
         "smart": True,
         "only_weight": False,
@@ -947,11 +996,11 @@ if __name__ == "__main__":
 decile_subset_bsphiphi =  [51, 710, 180, 250, 266, 64, 141, 308, 50, 453]
 decile_subset_minibias = [888, 27, 756, 18, 411, 390, 266, 696, 560, 885]
 
-for i, event in decile_subset_minibias:
+for i, event in enumerate(decile_subset_minibias):
     save_experiment(
-        "results_half_bifurcation_minibias_deciles_minimum_testpypy",
-        f"Test of the Hopfield network on the minibias dataset with the LEFT-RIGHT BIFURCATION, {i}th sample ",
-        f"Upgraded network - Run on EVENT {event} of the minibias dataset deciles with the LEFT-RIGHT BIFURCATION",
+        "run_HopfieldNetwork_halfbif_deciles_minibias_noterm",
+        f"Test of the Hopfield network on the minibias dataset, {i}th event of the mininbias dataset",
+        f"Upgraded network - Run on EVENT {event} of the minibias dataset deciles",
         parameters,
         f"/datasets/minibias/velo_event_",
         event,

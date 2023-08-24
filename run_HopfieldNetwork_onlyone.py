@@ -815,8 +815,7 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
             print("[INFO] Evaluate Event: %s" % file_name + str(i))
             start_timing = time.time() 
             json_data_event, (modules_even, modules_odd), modules = load_event(
-                file_name + str(i) + ".json", plot_event=False
-            )
+                file_name + str(i) + ".json", plot_event=False)
             
             total_hits = 0
             max_neurons = 0
@@ -840,12 +839,15 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
             start_time = time.time()
             all_hopfield = Hopfield(modules=modules, parameters=parameters)
             end_time = time.time() - start_time
-            
+
+
+
             print(
                 "[INFO] Hopfield Networks initialized in %i mins %.2f seconds"
                 % (end_time // 60, end_time % 60)
             )
 
+            print((all_hopfield.N))
 
             try:
                 iter_all = all_hopfield.bootstrap_converge(
@@ -853,16 +855,27 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
                     method=parameters["bootstrap_method"],
                 )
 
+                print((all_hopfield.N)) 
+
                 start_time = time.time()
                 all_hopfield.mark_bifurcation()
+                
+                N = all_hopfield.N
+                N_info = all_hopfield.N_info
+
+
+                print((all_hopfield.N)) 
+
                 all_tracks = all_hopfield.full_tracks()
+
+                print(all_tracks)
+
                 event_tracks = all_tracks 
                 end_time = time.time() - start_time
                 print(
                     "[INFO] tracks extracted in %i mins %.2f seconds"
                     % (end_time // 60, end_time % 60)
                 )
-                print(all_hopfield)
 
                 json_data_all_events.append(json_data_event)
                 all_tracks.append(event_tracks)
@@ -873,65 +886,17 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
                 end_timing = time.time() - start_timing
                 end_timing_format = time.strftime("%H:%M:%S", time.gmtime(end_timing))
                 timing_tracking.append(end_timing_format)
+
+                
                 count = count + 1
 
+                return N,N_info
             except:
                 continue
 
         except:
             continue
-    
-    end_time_networks = time.time() - start_time_networks
 
-    start_time = time.time()
-    if output_file:
-        print(output_file)
-        sys.stdout = open(output_file, "a")
-        print(
-            "Total time to run all the Hopfield Networks: %i mins %.2f seconds."
-            % (end_time_networks // 60, end_time_networks % 60) 
-            )
-        print(f"Average number of iterations per convergence: {iter_all} iterations. \n")
-
-        print(f"ID of each event: {id_events_tracking}")
-        print(f"Number of hits by event: {total_hits_tracking} ")
-        print(f"Number of max_neurons by event: {nr_max_neurons_tracking} ")
-        print(f"Hopfield networks runtime by event: {timing_tracking} \n")
-        print(all_tracks)
-        vl.validate_print(json_data_all_events, all_tracks, return_data=True)
-        print("____________________")
-        sys.stdout.close()
-        sys.stdout = sys.__stdout__
-    end_time = time.time() - start_time
-
-    # we could check how many tracks acutally cross the detector sides i guess to identify where some clones come from...
-    print(
-        "[INFO] validation excecuted in %i mins %.2f seconds"
-        % (end_time // 60, end_time % 60)
-    )
-
-
-def mse(network, tracks):
-    true_network = Hopfield(modules=network.m, parameters=network.p, tracks=tracks)
-    return ((network.N - true_network.N) ** 2).mean(axis=None)
-
-# SAVE EXPERIMENT 
-def save_experiment(exp_name, exp_num, desc, p, event_file_name, nr_events):
-
-    f = open(project_root + "/results/" + exp_name + ".txt", "a")
-    f.write(
-        f"\n Experiment {exp_num}\n\n{desc}\nNumber of events: {nr_events}\nParameters: {p}\n"
-    )
-    f.close()
-    
-    evaluate_events(
-        project_root + event_file_name,
-        p,
-        nr_events,
-        False,
-        project_root + "/results/" + exp_name + ".txt",
-    )
-    f = open(project_root + "/results/" + exp_name + ".txt", "a")
 
 
 
@@ -959,7 +924,7 @@ if __name__ == "__main__":
         "fully_randomized_updates": False,
         #### THRESHOLD ###
         "maxActivation": True,
-        "THRESHOLD": 0.2,
+        "THRESHOLD": 0.1,
         ##### CONVERGENCE ###
         "convergence_threshold": 0.00000005,
         "bootstrap_iters": 10,
@@ -970,7 +935,7 @@ if __name__ == "__main__":
         "max_activation": False,
         ###### Track prunning #######
         # here we could set the threshold
-        "pruning_tr": 0.05,
+        "pruning_tr": 0.01,
     }
 
 #################### RUN THE NETWORK ON HITS #######################
@@ -991,14 +956,8 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-samples_dataset_minibias = ["Samples_664_to_978_hits"]
 
-for index, sample in enumerate(samples_dataset_minibias):
-    save_experiment(
-        "results_minibias_samples_hits_only_one_HN",
-        f"Test of the Hopfield network on the {index+2}th sample minibias dataset",
-        f"Upgraded network - Best Configuration test on 1 event from the {index+2}th sample of minibias dataset ({sample})",
-        parameters,
-        f"/datasets/samples/minibias_samples_hits/{sample}/velo_event_",
-        1,
-    )
+    file_name = project_root +  "/datasets/samples/minibias_samples_hits/Samples_980_to_1255_hits/velo_event_"
+    nr_events = 1
+    N, N_info = evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output_file=None)
+
