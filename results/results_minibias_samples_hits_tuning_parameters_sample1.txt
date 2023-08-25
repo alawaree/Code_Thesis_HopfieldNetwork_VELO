@@ -1,0 +1,9 @@
+
+ Experiment Test of the Hopfield network on the 1st sample minibias dataset with pruning_tr=0.01 and thres=0.01
+
+Upgraded network - Configuration test on 10 events from the 1st sample of minibias dataset (Samples_51_to_663_hits) with 
+ halfbif,
+ pruning_tr=0.01, 
+ thres=0.01
+Number of events: 100
+Parameters: {'random_neuron_init': True, 'binary_states': False, 'ALPHA': 1, 'BETA': 10, 'GAMMA': 10, 'narrowness': 200, 'constant_factor': 0.9, 'monotone_constant_factor': 0.9, 'T': 1e-08, 'B': 1e-06, 'T_decay': <function <lambda> at 0x7f47a2aa5550>, 'B_decay': <function <lambda> at 0x7f47a2aa55e0>, 'decay_off': False, 'randomized_updates': True, 'fully_randomized_updates': False, 'maxActivation': True, 'THRESHOLD': 0.01, 'convergence_threshold': 5e-08, 'bootstrap_iters': 10, 'bootstrap_method': 'below_mean', 'smart': True, 'only_weight': False, 'max_activation': False, 'pruning_tr': 0.01}
