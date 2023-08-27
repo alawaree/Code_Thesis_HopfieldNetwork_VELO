@@ -30,18 +30,11 @@ project_root = file_path
 if project_root not in sys.path:
     sys.path.append(project_root)
 
-#print(project_root)
-# PROJECT MODULES
-#module_path = os.path.abspath(os.path.join('..'))
-#if module_path not in sys.path:
- #   sys.path.append(module_path)
 
 from event_model import event_model as em
 from validator import validator_lite as vl
 import data_analysis.event_generator as eg
 from visual.color_map import Colormap
-
-#project_root = module_path
 
 
 # CONTEXTS 
@@ -131,11 +124,10 @@ class Hopfield:
                     self.N_info[idx, n_idx, 3] = monotone_dist
 
     def init_weights(self, neg_weights=False):
-        #### get params from the dict #######
         alpha = self.p["ALPHA"]
         beta = self.p["BETA"]
         gamma = self.p["GAMMA"]
-        #####################################
+
         self.W = np.zeros(
             shape=(self.modules_count - 2, self.max_neurons, self.max_neurons,)
         )
@@ -205,19 +197,15 @@ class Hopfield:
                             + monotone_constant
                             + constant
                         )
-                        #    + constant # this does not work properly
+
 
                         if not neg_weights:
                             self.W[w_idx, ln_idx, rn_idx] = max(
                                 0, self.W[w_idx, ln_idx, rn_idx]
                             )
 
-                        # maybe we can play a bit around with this
 
     def update(self):
-        # I think here we need to look at the first neurons,
-        # then all the neurons in between as they are dependent on two other layers of neurons
-        # then the last layer of the neurons as they only dep on one side
         update_list = []
         for idx in range(self.modules_count - 1):
             c1 = self.hit_counts[idx]
@@ -252,20 +240,18 @@ class Hopfield:
         # left module and right module hit id -> current neuron connects hit lm_id with hit rn_id
         lm_id = i // c2
         rm_id = i % c2
-        # there can be a lot improved runtime wise with storing the sums and adj
-        # but too complicated for now
+
         # all segments mapping to the hit in m1 -> the left module
         m1h = np.sum(self.N[idx, lm_id * c2 : (lm_id + 1) * c2])
         # all segments mapping to the hit in m2 - the right module
         m2h = np.sum(
-            self.N[idx, : c1 * c2].reshape(c2, c1)[rm_id, :]
-        )  # correct as well...
+            self.N[idx, : c1 * c2].reshape(c2, c1)[rm_id, :]) 
+
         # we need to subtract the neuron of the segment 2 times because we add it 2 times
         pen = m1h + m2h - 2 * self.N[idx, i]
         _update = 0.5 * (1 + tanh(update / t - b * pen / t))
 
         if self.p["binary_states"]:
-            # XXX some threshold... -> we dont use bina
             if random.random() < _update:
                 self.N[idx, i] = 1
             else:
@@ -283,7 +269,6 @@ class Hopfield:
             c2 = self.hit_counts[idx + 1]
             c3 = self.hit_counts[idx + 2]
 
-            # XXX: just realised we are counting most penalties too often!! -> fixed
             f1 = 0.5
             f2 = 0.5
             if idx == 0:
@@ -307,10 +292,9 @@ class Hopfield:
 
     def converge(self):
         # Basically keep updating until the difference in Energy between timesteps is lower than 0.0005 (Based on Stimfple-Abele)
-        # Passaleva uses a different kind of convergence i think (4)
         self.energies = [
             self.energy()
-        ]  # store all energies (not fastest but maybe nice for visualisations)
+            ]  
         t = 0  # timesteps
         self.p["T"] = self.start_T
         # self.p["B"] = self.start_B
@@ -360,7 +344,6 @@ class Hopfield:
             # print(f"Finished {i+1}/{bootstraps} iterations")
 
         if method == "minimum":
-            # XXX: eventually we could take the lowest 20% or so
             self.N = states_list[np.argmax(energy_list)]
             energy_list = [np.amax(energy_list)]
 
@@ -394,9 +377,7 @@ class Hopfield:
 
 
     def full_tracks(self):
-        # this will deal with stange angles!!!
-        # under the assumption that we removed bifuration completely
-        # init this active tracks with all active neurons in layer 1! -> key is the right hit
+
         global_candidates = []
         global_candidate_states = []
         global_candidate_info = []
@@ -448,7 +429,6 @@ class Hopfield:
             global_candidate_states = global_candidate_states + [states]
             global_candidate_info = global_candidate_info + [info]
 
-        # here comes the function of 'pruning...' maybe i need to store more info for doing that!!!
         global_candidates = self.prune_tracks(global_candidates, global_candidate_info)
 
         global_candidates = [em.track(hits) for hits in global_candidates]
@@ -457,9 +437,7 @@ class Hopfield:
 
         return global_candidates
 
-    # tr 0.1 seems decent for sum of info differences...
-    # we could look more carully into a criterion for this on big instances but here is fine...
-    # XXX: need to check that method properly again
+
     def prune_tracks(self, tracks, track_infos):
         tr = self.p["pruning_tr"]
         out_tracks = []
@@ -467,11 +445,9 @@ class Hopfield:
             num_hits = len(track)
             if num_hits < 3:  # sorting out the tracks that are not relevant
                 continue
-            # only if len> 6 need to think about splitting!!!
             cand = [track[0], track[1]]
             cand_info = info[0]
             for idx in range(1, num_hits - 1):
-                # if abs(cand_info[3] - info[idx][3]) < tr:
                 if sum(abs(cand_info - info[idx])) < tr:
                     cand = cand + [track[idx + 1]]
                 else:
@@ -742,7 +718,6 @@ def evaluate_events(file_name, parameters, nr_events=1, plot_event=False, output
         sys.stdout = sys.__stdout__
     end_time = time.time() - start_time
 
-    # we could check how many tracks acutally cross the detector sides i guess to identify where some clones come from...
     print(
         "[INFO] validation excecuted in %i mins %.2f seconds"
         % (end_time // 60, end_time % 60)
@@ -829,7 +804,11 @@ if __name__ == "__main__":
 #9,10: "Samples_3265_to_3719_hits", "Samples_3726_to_8666_hits"
 
 
-samples_dataset = ["Samples_51_to_663_hits", "Samples_664_to_978_hits"]
+samples_dataset = ["Samples_51_to_663_hits", "Samples_664_to_978_hits",
+                    "Samples_980_to_1255_hits","Samples_1257_to_1549_hits",
+                    "Samples_1550_to_1812_hits","Samples_1819_to_2119_hits",
+                    "Samples_2121_to_2464_hits","Samples_2468_to_2853_hits",
+                    "Samples_2854_to_3405_hits","Samples_3412_to_6786_hits"]
 
 for index, sample in enumerate(samples_dataset):
     save_experiment(
